@@ -1,4 +1,4 @@
-# Enmoda+ - Nova Home
+# Enmoda+ - Novo site
 
 Desenvolvimento da nova Home da **Enmoda+**, plataforma pioneira em educação de moda no Brasil.  
 Projeto em **React + Vite** com **TailwindCSS** e design no **Figma**, trazendo foco em UX moderno, responsividade e performance.
@@ -9,11 +9,12 @@ Projeto em **React + Vite** com **TailwindCSS** e design no **Figma**, trazendo 
 - Figma (UI/UX)  
 
 ## ✦ Funcionalidades
+- Layout dinâmico e escalável 
 - Carrossel de cursos e benefícios  
 - Seções responsivas e otimizadas  
 - FAQ interativo  
 - Modal de vídeo em depoimentos  
-- Layout dinâmico e escalável  
+ 
 
 ## ✦ Integrações
 - WhatsApp  
