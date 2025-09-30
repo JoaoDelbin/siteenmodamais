@@ -21,7 +21,7 @@ export default function Header() {
     <>
 
       <header className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between text-sm">
-        <div className="text-3xl md:text-5xl text-[#FF2C64]">enmoda+</div>
+        <div className="text-3xl md:text-4xl text-[#FF2C64]">enmoda+</div>
 
 
         <nav className="hidden md:flex items-center gap-6 text-gray-300">
