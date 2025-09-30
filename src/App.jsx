@@ -2,7 +2,7 @@ import CourseMarquee from "./components/CourseMarquee";
 import CommunityTransform from "./components/CommunityTransform";
 import AccessSection from "./components/AccessSection";
 import PhoneVerifyBar from "./components/PhoneVerifyBar";
-import ConhecaEnmoda from "./components/conhecaenmoda";
+import ConhecaEnmoda from "./components/ConhecaEnmoda";
 import BenefitsCarousel from "./components/BenefitsCarousel";
 import FaqSection from "./components/FaqSection";
 import PlansSection from "./components/planos";
