@@ -48,7 +48,7 @@ export default function PlansSection() {
             </button>
           </article>
 
-          <article className="relative rounded-xl bg-[#181516] border border-[#C2F738] p-6 md:p-8 flex flex-col shadow-[0_0_0_1px_rgba(194,247,56,0.08)]">
+          <article className="relative rounded-xl bg-[#181516] border border-[#C2F738] p-6 md:p-8 flex flex-col transition duration-300 ease-in-out hover:shadow-[0_4px_20px_2px_#C2F738]">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF2C64] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
               <BadgePercent className="w-3.5 h-3.5" /> MAIS VANTAJOSO
             </span>
@@ -71,7 +71,7 @@ export default function PlansSection() {
               ))}
             </ul>
 
-            <button className="mt-6 w-full py-3 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]">
+            <button className="transition duration-300 ease-in-out hover:shadow-[0_0_8px_1px_#C2F738] mt-6 w-full py-3 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]">
               ASSINAR ANUAL
             </button>
           </article>

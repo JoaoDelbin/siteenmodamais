@@ -15,20 +15,20 @@ const BENEFITS = [
 
 function Card({ icon, title, text }) {
   return (
-    <div className="shrink-0 w-[300px] h-[150px]"> 
+    <div className="shrink-0 w-[200px] h-[200px] md:w-[300px] md:h-[150px]"> 
       <div
         className="
           h-full rounded-xl bg-[#181516] border border-white/10 p-6
           transition hover:shadow-l-[#FF2C64]
-          cursor-default select-none flex flex-col
+          cursor-default select-none flex flex-col text-center
         "
       >
-        <div className="mb-3">{icon}</div>
-        <div className="text-[20px] font-semibold leading-tight truncate">
+        <div className="mb-3 mt-1 flex items-center justify-center">{icon}</div>
+        <div className="text-md text-wrap font-semibold leading-tight truncate">
           {title}
         </div>
         
-        <p className="mt-1 text-[14px] text-gray-300 leading-snug two-lines">
+        <p className="mt-1 text-sm text-gray-300 leading-snug two-lines">
           {text}
         </p>
       </div>
@@ -98,8 +98,8 @@ export default function BenefitsCarousel({ speedPxPerFrame = 1.1 }) {
 
   return (
     <section className="w-full bg-[#0D0A0B] text-white">
-      <div className="max-w-[1440px] mx-auto px-6 pt-8 pb-10">
-        <h2 className="text-center text-2xl md:text-3xl font-extrabold mb-6">
+      <div className="mt-6 max-w-[1440px] mx-auto px-6 pt-2 md:pt-8 pb-10">
+        <h2 className="text-center text-3xl md:text-5xl font-bold mb-6">
           Por que assinar a <span className="text-[#FF2C64]">enmoda+</span>
         </h2>
 
@@ -129,19 +129,26 @@ export default function BenefitsCarousel({ speedPxPerFrame = 1.1 }) {
         </div>
 
 
-        <div className="mt-6 flex items-center justify-center gap-4">
-          <button className="px-6 py-2 rounded-full bg-[#C2F738] text-[#32410A] text-sm font-semibold hover:bg-[#B4E436]">
-            QUERO COMEÇAR AGORA
-          </button>
-          <div className="flex items-center gap-2">
-            <div className="flex -space-x-2">
-              <div className="w-8 h-8 rounded-full bg-gray-300 border-2 border-[#0D0A0B]" />
-              <div className="w-8 h-8 rounded-full bg-gray-300 border-2 border-[#0D0A0B]" />
-              <div className="w-8 h-8 rounded-full bg-gray-300 border-2 border-[#0D0A0B]" />
-              
-            </div>
-            <span className="text-sm font-semibold text-white">+1.000 assinantes</span>
-          </div>
+        <div className="mt-2 flex flex-col items-center gap-3
+                md:flex-row md:justify-center md:gap-4">
+           <button
+    className="font-bold px-3 py-1 text-base
+               md:px-4 md:py-1.5 md:text-lg
+               rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out
+                       hover:shadow-[0_0_10px_2px_#C2F738]">
+    QUERO COMEÇAR AGORA
+  </button>
+
+  <div className="flex items-center gap-1">
+    <div className="flex -space-x-2.5">
+      <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-[#0B0B15]" />
+      <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-[#0B0B15]" />
+      <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-[#0B0B15]" />
+    </div>
+    <span className="text-xs md:text-base font-semibold text-gray-300">
+      +1.000 assinantes
+    </span>
+  </div>
         </div>
       </div>
 

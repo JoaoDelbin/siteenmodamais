@@ -21,7 +21,7 @@ export default function Header() {
     <>
 
       <header className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between text-sm">
-        <div className="text-3xl md:text-4xl text-[#FF2C64]">enmoda+</div>
+        <div className="text-xl md:text-4xl text-[#FF2C64]">enmoda+</div>
 
 
         <nav className="hidden md:flex items-center gap-6 text-gray-300">
@@ -31,7 +31,7 @@ export default function Header() {
 
    
         <div className="flex items-center gap-2">
-          <button className="hidden md:inline px-4 py-1.5 rounded-full bg-[#C2F738] text-[#32410A] hover:bg-[#B4E436]">
+          <button className="hidden md:inline px-4 py-1.5 rounded-full bg-[#C2F738] text-[#32410A] hover:shadow-[0_0_8px_1px_#C2F738]">
             ASSINE AGORA
           </button>
           <button className="hidden md:inline px-4 py-1.5 rounded-full text-white border-2 border-[#FF2C64] hover:bg-[#FF2C64]">

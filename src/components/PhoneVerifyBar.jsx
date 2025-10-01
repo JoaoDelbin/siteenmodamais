@@ -37,7 +37,7 @@ export default function PhoneVerifyBar() {
 
     if (!ddd) return rest; 
 
-    const cinco = rest.length === 9; // celular
+    const cinco = rest.length === 9; 
     const p1 = cinco ? rest.slice(0, 5) : rest.slice(0, 4);
     const p2 = cinco ? rest.slice(5) : rest.slice(4);
 
@@ -56,7 +56,7 @@ export default function PhoneVerifyBar() {
 
     
     const isOfficial = [...officialDigits].some(stored => {
-      const a = stored.slice(-11); // DDD + 9
+      const a = stored.slice(-11); 
       const b = d.slice(-11);
       return a === b;
     });
@@ -68,62 +68,74 @@ export default function PhoneVerifyBar() {
     if (e.key === "Enter") handleVerify();
   }
 
-  return (
-    <section className="w-full bg-gradient-to-r from-[#0D0A0B] via-[#242424] to-[#0D0A0B] text-white">
-      <div className="max-w-[1440px] mx-auto px-6 py-6">
-        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <div className="text-center md:text-left">
-            <h3 className="text-xl md:text-2xl font-extrabold">
-              Alguém da escola entrou em contato com você?
-            </h3>
-            <p className="text-sm text-white/80">
-              Verifique nossos números oficiais:
-            </p>
-          </div>
+return (
+  <section className="w-full bg-gradient-to-r from-[#0D0A0B] via-[#171415] to-[#0D0A0B] text-white">
+    <div className="max-w-[1440px] mx-auto px-6 py-5 pt-2 md:pt-8">
+   
+      <h3 className="text-center text-2xl md:text-3xl font-extrabold">
+        Alguém da escola entrou em contato com você?
+      </h3>
 
-          {/* form */}
-          <div className="flex items-center justify-center gap-2">
-            <label htmlFor="phone-verify" className="sr-only">
-              Número de telefone
-            </label>
-            <input
-              id="phone-verify"
-              ref={inputRef}
-              inputMode="numeric"
-              placeholder="(11) 99199-9999"
-              value={value}
-              onChange={handleChange}
-              onKeyDown={onKeyDown}
-              className="h-10 w-[200px] md:w-[240px] rounded-full bg-white text-[#0B0B15] px-4 text-sm outline-none
-                         focus:ring-2 focus:ring-[#C2F738]"
-            />
-            <button
-              onClick={handleVerify}
-              className="h-10 px-5 rounded-full bg-black text-white text-sm font-semibold
-                         border border-white/10 hover:bg-white hover:text-black transition"
-            >
-              VERIFICAR
-            </button>
-          </div>
-        </div>
+     
+      <div
+        className="
+          mt-8 md:mt-10
+          flex flex-wrap items-center justify-center
+          gap-2 md:gap-3
+          text-center
+        "
+      >
+        <span className="text-sm md:text-base text-white/80">
+          Verifique nossos números oficiais:
+        </span>
 
-        {/* resposta do numero */}
-        <div
-          className="mt-3 min-h-[1.25rem] text-center md:text-right"
-          aria-live="polite"
+        <label htmlFor="phone-verify" className="sr-only">
+          Número de telefone
+        </label>
+
+        <input
+          id="phone-verify"
+          ref={inputRef}
+          inputMode="numeric"
+          placeholder="(11) 99199-9999"
+          value={value}
+          onChange={handleChange}
+          onKeyDown={onKeyDown}
+          className="
+            h-10 w-[200px] md:w-[240px]
+            rounded-full bg-white text-[#0B0B15]
+            px-4 text-sm outline-none
+            focus:ring-2 focus:ring-[#C2F738]
+          "
+        />
+
+        <button
+          onClick={handleVerify}
+          className="
+            h-10 px-5 rounded-full
+            bg-black text-white text-sm font-semibold
+            border border-white/10
+            hover:bg-white hover:text-black transition
+          "
         >
-          {status === "ok" && (
-            <span className="inline-flex items-center gap-2 text-[13px] text-[#C2F738]">
-              ✓ Número oficial
-            </span>
-          )}
-          {status === "bad" && (
-            <span className="inline-flex items-center gap-2 text-[13px] text-[#FF2C64]">
-              • Número não encontrado na nossa lista oficial
-            </span>
-          )}
-        </div>
+          VERIFICAR
+        </button>
       </div>
-    </section>
-  );
+
+      {/* retorno */}
+      <div className="mt-2 min-h-[0.8rem] text-center" aria-live="polite">
+        {status === "ok" && (
+          <span className="inline-flex items-center gap-2 text-[13px] text-[#C2F738]">
+            ✓ Número oficial
+          </span>
+        )}
+        {status === "bad" && (
+          <span className="inline-flex items-center gap-2 text-[13px] text-[#FF2C64]">
+            • Número não encontrado na nossa lista oficial
+          </span>
+        )}
+      </div>
+    </div>
+  </section>
+            ); 
 }

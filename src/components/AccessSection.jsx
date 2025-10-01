@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 
 function Check() {
   return (
@@ -8,53 +9,95 @@ function Check() {
 }
 
 export default function AccessSection() {
+
+  const container = {
+    initial: {},
+    animate: {
+      transition: { staggerChildren: 0.08 }
+    }
+  };
+
+ 
+const fadeUpSoft = {
+  initial: { opacity: 0, y: 12 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 60,  
+      damping: 20,     
+      mass: 2,        
+    }
+  }
+};
+
   return (
     <section className="max-w-[1440px] bg-[#0D0A0B] mx-auto px-6 pt-6 pb-12 text-center mt-10">
       <div className="max-w-6xl mx-auto text-center">
-       
-        <h2 className="text-3xl md:text-4xl font-extrabold">O que você terá acesso</h2>
-        <p className="mt-2 text-lg md:text-xl text-gray-200">
-          tudo dentro do ecossistema <span className="font-extrabold">enmoda+</span>
+        <h2 className="text-3xl md:text-5xl font-bold">O que você terá acesso</h2>
+        <p className="mt-1 md:mt-4 text-md md:text-2xl text-gray-200">
+          tudo dentro do ecossistema <span className="font-bold">enmoda+</span>
         </p>
 
-        
-        <div className="mt-8 flex flex-col md:flex-row justify-center gap-10">
-          
-          <div className="rounded-xl bg-[#110E0F] border-l-2 p-6 md:p-7 shadow max-w-[440px] w-full">
-            <h3 className="text-xl font-extrabold mb-4">Benefícios imediatos</h3>
-            <ul className="space-y-3 text-[15px] md:text-base">
-              {[
-                'Mais de 300 aulas',
-                'Aulas semanais ao vivo',
-                'Plataforma de vagas',
-                'Comunidade exclusiva',
-                'Suporte pedagógico personalizado',
-              ].map(item => (
-                <li key={item} className="flex gap-2">
-                  <Check /> <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mt-8">
+          <motion.div
+            variants={container}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex flex-col md:flex-row justify-center gap-10"
+          >
+            {/* Card 1 */}
+            <motion.div
+              variants={fadeUpSoft}
+              className="rounded-xl bg-[#110E0F] border-l-2 border-[#FF2C64]
+                         pt-2 pb-2 p-2 md:p-7 max-w-[560px] w-full
+                         transition-shadow duration-300 ease-in-out
+                         hover:shadow-[0_0_20px_8px_#FF2C64] will-change-transform"
+            >
+              <h3 className="text-xl md:text-3xl font-bold mb-4">Benefícios imediatos</h3>
+              <ul className="space-y-3 text-md md:text-2xl">
+                {[
+                  "Mais de 300 aulas",
+                  "Aulas semanais ao vivo",
+                  "Plataforma de vagas",
+                  "Comunidade exclusiva",
+                  "Suporte pedagógico personalizado",
+                ].map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <Check /> <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
 
-          
-          <div className="rounded-xl bg-[#110E0F] border-l-2 p-6 md:p-7 shadow max-w-[440px] w-full">
-            <h3 className="text-xl font-extrabold mb-4">
-              Cursos com os principais especialistas do mercado:
-            </h3>
-            <ul className="space-y-3 text-[15px] md:text-base">
-              {['Competências', 'Fundamentos', 'Soft Skills', 'Ferramentas'].map(item => (
-                <li key={item} className="flex gap-2">
-                  <Check /> <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Card 2 */}
+            <motion.div
+              variants={fadeUpSoft}
+              className="rounded-xl bg-[#110E0F] border-l-2 border-[#FF2C64]
+                         pt-2 pb-2 p-2 md:p-7 max-w-[560px] w-full
+                         transition-shadow duration-300 ease-in-out
+                         hover:shadow-[0_0_20px_8px_#FF2C64] will-change-transform"
+            >
+              <h3 className="text-xl md:text-3xl font-bold mb-4">
+                Cursos com os principais especialistas do mercado:
+              </h3>
+              <ul className="space-y-3 text-md md:text-2xl">
+                {["Competências", "Fundamentos", "Soft Skills", "Ferramentas"].map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <Check /> <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
         </div>
 
-       
         <button
-          className="mt-7 inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#A3F11E] text-[#0B0B15] font-semibold shadow hover:brightness-95 active:translate-y-[1px]"
+          className="mt-7 font-bold px-3 py-1 text-base
+                     md:px-4 md:py-1.5 md:text-lg
+                     rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]"
         >
           QUERO COMEÇAR AGORA
         </button>
