@@ -72,7 +72,7 @@ export default function Header() {
         aria-label="Menu"
       >
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-          <div className="font-extrabold text-lg">enmoda+</div>
+          <div className="text-[#FF2C64] text-lg">enmoda+</div>
           <button
             ref={closeBtnRef}
             className="text-white/80 hover:text-white"
@@ -96,14 +96,14 @@ export default function Header() {
           <Link
             to="/assinar"
             onClick={() => setOpen(false)}
-            className="mt-2 px-4 py-2 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]"
+            className="mt-2 px-4 py-2 rounded-full bg-[#C2F738] text-[#32410A] text-center font-semibold hover:bg-[#B4E436]"
           >
             ASSINE AGORA
           </Link>
           <Link
             to="/login"
             onClick={() => setOpen(false)}
-            className="mt-2 px-4 py-2 rounded-full text-white border-2 border-[#FF2C64] hover:bg-[#FF2C64]"
+            className="mt-2 px-4 py-2 rounded-full  text-center text-white border-2 border-[#FF2C64] hover:bg-[#FF2C64]"
           >
             SOU ASSINANTE
           </Link>
