@@ -72,7 +72,7 @@ export default function Header() {
         aria-label="Menu"
       >
         <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-          <div className="text-[#FF2C64] text-lg">enmoda+</div>
+          <Link to="/" className="text-xl md:text-4xl text-[#FF2C64]">enmoda+</Link>
           <button
             ref={closeBtnRef}
             className="text-white/80 hover:text-white"
