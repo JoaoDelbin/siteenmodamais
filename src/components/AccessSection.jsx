@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function Check() {
   return (
-    <svg aria-hidden="true" className="w-4 h-4 mt-1 shrink-0" viewBox="0 0 20 20" fill="#C2F738">
+    <svg aria-hidden="true" className="w-4 h-4 md:w-5 md:h-5 mt-1 shrink-0" viewBox="0 0 20 20" fill="#FF2C64">
       <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.3 3.3 6.8-6.8a1 1 0 0 1 1.4 0z"/>
     </svg>
   );

@@ -1,0 +1,138 @@
+import { Link, useParams } from "react-router-dom";
+import COURSES from "../assets/courses";
+
+export default function CourseDetail() {
+  const { id } = useParams();
+  const course = COURSES.find((c) => String(c.id) === String(id));
+
+  if (!course) {
+    return (
+      <main className="min-h-screen w-full bg-[#0D0A0B] text-white grid place-items-center p-6">
+        <div className="text-center space-y-4">
+          <div className="text-2xl font-semibold">Curso não encontrado</div>
+          <Link
+            to="/conteudo"
+            className="inline-block px-5 py-2 rounded-full bg-[#C2F738] text-[#32410A] font-semibold"
+          >
+            Voltar ao conteúdo
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
+  return (
+    <main className="min-h-screen w-full bg-[#0D0A0B] text-white">
+      <div className="max-w-[1200px] mx-auto px-6 pt-8 pb-12">
+        <div className="mb-6">
+          <Link to="/conteudo" className="text-white/70 hover:text-white text-sm">
+            ← Voltar
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-[minmax(260px,360px),1fr] gap-8">
+          <div className="rounded-xl overflow-hidden bg-white/5">
+            <img
+              src={`/courses/${course.cover}`}
+              alt={course.title}
+              className="hidden w-full h-64 md:h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src =
+                  "https://images.unsplash.com/photo-1520975940468-88d8a520f3d8?q=80&w=720&auto=format";
+              }}
+            />
+          </div>
+
+          <div className="flex flex-col md:h-full">
+            <h1 className="text-3xl md:text-4xl font-extrabold leading-tight">
+              {course.title}
+            </h1>
+
+            {course.teacher && (
+              <div className="mt-2 text-white/80 text-sm">com {course.teacher}</div>
+            )}
+            {course.duration && course.lessons && (
+              <div className="mt-1 text-white/60 text-xs">
+                {course.duration} • {course.lessons} aulas
+              </div>
+            )}
+
+            {course.tagline && (
+              <p className="mt-4 text-white/85 leading-relaxed">{course.tagline}</p>
+            )}
+
+            {Array.isArray(course.learn) && course.learn.length > 0 && (
+              <div className="mt-6">
+                <div className="text-[13px] uppercase tracking-wide text-white/60 mb-2">
+                  O que você vai aprender
+                </div>
+                <ul className="space-y-2 text-[15px] leading-relaxed">
+                  {course.learn.slice(0, 14).map((it, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="mt-1.5 inline-block h-1.5 w-1.5 rounded-full bg-[#FF2C64]" />
+                      <span className="break-words">{it}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <div className="mt-6 md:mt-auto flex items-center justify-between gap-3 flex-wrap sticky bottom-0 bg-[#0D0A0B]/95 backdrop-blur md:static md:bg-transparent md:backdrop-blur-0 py-3 md:py-0">
+              <button className="font-bold px-3 py-1 text-base mt-6 mb-10 md:mt-10 md:mb-6 md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
+                QUERO COMEÇAR AGORA
+              </button>
+              <span className="text-xs text-white/60">
+                A assinatura enmoda+ libera acesso a todos os cursos.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* ======== Seção: Professor(a) ======== */}
+        { (course.teacher || course.teacherBio || course.teacherPhoto) && (
+          <section className="mt-10 md:mt-12">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6
+                            shadow-[0_0_24px_rgba(255,44,100,0.08)]">
+              <div className="grid grid-cols-[64px,1fr] sm:grid-cols-[80px,1fr] gap-4 items-start">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden
+                                ring-2 ring-[#FF2C64]/50 bg-white/10">
+                  <img
+                    src={
+                      course.teacherPhoto
+                        ? `/teachers/${course.teacherPhoto}`
+                        : "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=300&auto=format"
+                    }
+                    alt={course.teacher || "Professor(a)"}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src =
+                        "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=300&auto=format";
+                    }}
+                  />
+                </div>
+
+                <div className="min-w-0">
+                  <div className="text-xs uppercase tracking-wide text-white/60">
+                    Professor(a)
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-extrabold mt-0.5">
+                    {course.teacher || "—"}
+                  </h3>
+
+                  {course.teacherBio && (
+                    <p className="mt-3 text-white/85 leading-relaxed text-sm sm:text-base">
+                      {course.teacherBio}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+        {/* ======== /Professor(a) ======== */}
+      </div>
+    </main>
+  );
+}

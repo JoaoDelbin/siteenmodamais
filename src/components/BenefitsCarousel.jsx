@@ -4,13 +4,13 @@ import {
 } from "lucide-react";
 
 const BENEFITS = [
-  { icon: <CheckCircle className="w-6 h-6 text-[#C2F738]" />, title: "Estude com os melhores", text: "Aprenda com experts que moldam a indústria da moda." },
-  { icon: <BookOpen className="w-6 h-6 text-[#C2F738]" />, title: "Explore temas diferentes", text: "Design, marketing, comunicação, varejo e muito mais." },
-  { icon: <Heart className="w-6 h-6 text-[#C2F738]" />, title: "Descubra novas paixões", text: "Encontre novos interesses e talentos." },
-  { icon: <FileText className="w-6 h-6 text-[#C2F738]" />, title: "Materiais complementares", text: "Conteúdo detalhado para aprofundar." },
-  { icon: <Headphones className="w-6 h-6 text-[#C2F738]" />, title: "Ouça enquanto pratica", text: "Transforme qualquer momento em estudo." },
-  { icon: <Award className="w-6 h-6 text-[#C2F738]" />, title: "Certificados de cursos", text: "Reconhecidos e valorizam seu currículo." },
-  { icon: <Clock className="w-6 h-6 text-[#C2F738]" />, title: "Horas complementares", text: "Essenciais para sua formação." },
+  { icon: <CheckCircle className="w-6 h-6 text-[#FF2C64]" />, title: "Estude com os melhores", text: "Aprenda com experts que moldam a indústria da moda." },
+  { icon: <BookOpen className="w-6 h-6 text-[#FF2C64]" />, title: "Explore temas diferentes", text: "Design, marketing, comunicação, varejo e muito mais." },
+  { icon: <Heart className="w-6 h-6 text-[#FF2C64]" />, title: "Descubra novas paixões", text: "Encontre novos interesses e talentos." },
+  { icon: <FileText className="w-6 h-6 text-[#FF2C64]" />, title: "Materiais complementares", text: "Conteúdo detalhado para aprofundar." },
+  { icon: <Headphones className="w-6 h-6 text-[#FF2C64]" />, title: "Ouça enquanto pratica", text: "Transforme qualquer momento em estudo." },
+  { icon: <Award className="w-6 h-6 text-[#FF2C64]" />, title: "Certificados de cursos", text: "Reconhecidos e valorizam seu currículo." },
+  { icon: <Clock className="w-6 h-6 text-[#FF2C64]" />, title: "Horas complementares", text: "Essenciais para sua formação." },
 ];
 
 function Card({ icon, title, text }) {
