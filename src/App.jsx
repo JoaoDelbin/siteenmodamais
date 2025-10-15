@@ -11,8 +11,10 @@ import PlansSection from "./components/planos";
 import Header from "./components/nav";
 import ConteudoPage from "./pages/ConteudoPage.jsx";
 import CourseDetail from "./pages/CourseDetail.jsx";
+import Assinantes from "./pages/Assinantes.jsx";
+import Sobre from "./pages/Sobre.jsx";
 
-/* ===== Home (seu conteúdo atual) ===== */
+/* ===== Home ===== */
 function Home() {
   return (
     <main className="w-full bg-[#0D0A0B] text-gray-100 min-h-screen font-sans">
@@ -97,7 +99,7 @@ function Home() {
   );
 }
 
-/* ===== App: Header + Rotas ===== */
+/* ===== Header + Rotas ===== */
 export default function App() {
   return (
     <div className="bg-[#0D0A0B] min-h-screen">
@@ -106,6 +108,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/conteudo" element={<ConteudoPage />} />
         <Route path="/conteudo/:id" element={<CourseDetail />} />
+         <Route path="/assinantes" element={<Assinantes />} />
+         <Route path="/sobre" element={<Sobre />} />
         <Route path="*" element={<Home />} /> {/* fallback */}
       </Routes>
     </div>
