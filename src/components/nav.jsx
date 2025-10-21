@@ -19,7 +19,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between text-sm">
+      <header className="sticky top-0 z-50 bg-[#0D0A0B]/85 backdrop-blur border-b border-white/10">
+        <div className="  max-w-6xl mx-auto px-6 py-5 flex items-center justify-between text-sm">
         <Link to="/" className="text-xl md:text-4xl text-[#FF2C64]">enmoda+</Link>
 
         <nav className="hidden md:flex items-center gap-6 text-gray-300">
@@ -52,6 +53,7 @@ export default function Header() {
           >
             <Menu size={28} />
           </button>
+        </div>
         </div>
       </header>
 

@@ -57,8 +57,49 @@ function urlCapa(curso) {
   return "https://images.unsplash.com/photo-1520975940468-88d8a520f3d8?q=80&w=720&auto=format";
 }
 
+/* ===================== PRELOAD DE IMAGENS ===================== */
+// Carrega imagens em background com concorrência limitada
+function useWarmImageCache(urls, { concurrency = 4 } = {}) {
+  useEffect(() => {
+    if (!urls?.length) return;
+
+    const unique = Array.from(new Set(urls.filter(Boolean)));
+    let i = 0;
+    let inFlight = 0;
+    let stopped = false;
+
+    const idle = (cb) =>
+      "requestIdleCallback" in window
+        ? window.requestIdleCallback(cb, { timeout: 1200 })
+        : setTimeout(cb, 0);
+
+    const kick = () => {
+      if (stopped) return;
+      while (inFlight < concurrency && i < unique.length) {
+        const u = unique[i++];
+        inFlight++;
+        const img = new Image();
+        img.decoding = "async";
+        img.src = u;
+        img.onload = img.onerror = () => {
+          inFlight--;
+          idle(kick);
+        };
+      }
+    };
+
+    idle(kick);
+    return () => {
+      stopped = true;
+    };
+  }, [urls, concurrency]);
+}
+
 /* ===================== CARD ===================== */
-function CardCurso({ curso, onBeforeOpen }) {
+const EAGER_QTD = 6; // quantos primeiros carregar como eager/high
+function CardCurso({ curso, idx = 0, onBeforeOpen }) {
+  const eager = idx < EAGER_QTD;
+
   return (
     <Link
       to={`/conteudo/${curso.id}`}
@@ -72,7 +113,8 @@ function CardCurso({ curso, onBeforeOpen }) {
         <img
           src={urlCapa(curso)}
           alt={curso.title}
-          loading="lazy"
+          loading={eager ? "eager" : "lazy"}
+          fetchpriority={eager ? "high" : "auto"}
           decoding="async"
           className="max-w-full max-h-full object-contain rounded-[18px]"
           draggable="false"
@@ -92,18 +134,20 @@ function CardCurso({ curso, onBeforeOpen }) {
 function CarouselSection({
   titulo,
   items,
-  storageKey,           
-  urlParam,             
-  onEmptyMessage,       
+  storageKey,
+  urlParam,
+  onEmptyMessage,
 }) {
   const trilhoRef = useRef(null);
   const [idx, setIdx] = useState(0);
   const [podeEsq, setPodeEsq] = useState(false);
   const [podeDir, setPodeDir] = useState(true);
-  const [passo, setPasso] = useState(2); 
-  const firstRender = useRef(true);
+  const [passo, setPasso] = useState(2);
   const { search } = useLocation();
 
+  // Pré-carrega as capas desta seção
+  const coverUrls = useMemo(() => items.map((c) => urlCapa(c)), [items]);
+  useWarmImageCache(coverUrls, { concurrency: 4 });
 
   useEffect(() => {
     const atualizarPasso = () => setPasso(window.innerWidth < 640 ? 1 : 5);
@@ -122,9 +166,10 @@ function CarouselSection({
 
     const params = new URLSearchParams(search);
     const param = params.get(urlParam);
-    const saved = param !== null
-      ? parseInt(param, 10)
-      : parseInt(sessionStorage.getItem(storageKey) || "0", 10);
+    const saved =
+      param !== null
+        ? parseInt(param, 10)
+        : parseInt(sessionStorage.getItem(storageKey) || "0", 10);
 
     const cards = getCards();
     if (!cards.length) {
@@ -139,10 +184,7 @@ function CarouselSection({
     setIdx(i);
     setPodeEsq(i > 0);
     setPodeDir(i < cards.length - 1);
-    firstRender.current = false;
-
   }, [items.length, search]);
-
 
   useEffect(() => {
     const el = trilhoRef.current;
@@ -168,7 +210,6 @@ function CarouselSection({
 
     el.addEventListener("scroll", onScroll, { passive: true });
     return () => el.removeEventListener("scroll", onScroll);
-    
   }, []);
 
   function irPara(indiceNovo) {
@@ -182,7 +223,7 @@ function CarouselSection({
     setPodeDir(i < cards.length - 1);
   }
   const anterior = () => irPara(idx - passo);
-  const proximo  = () => irPara(idx + passo);
+  const proximo = () => irPara(idx + passo);
 
   // (URL + sessionStorage)
   const salvarPosicao = () => {
@@ -210,8 +251,8 @@ function CarouselSection({
           className="overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth"
         >
           <div className="flex gap-4 items-start py-1">
-            {items.map((c) => (
-              <CardCurso key={c.id} curso={c} onBeforeOpen={salvarPosicao} />
+            {items.map((c, i) => (
+              <CardCurso key={c.id} curso={c} idx={i} onBeforeOpen={salvarPosicao} />
             ))}
           </div>
         </div>
@@ -287,7 +328,7 @@ export default function ConteudoPage() {
 
   // bases fixas
   const baseMaster = useMemo(() => CURSOS.slice(0, 5), []);
-  const baseAulas  = useMemo(() => CURSOS.slice(5), []);
+  const baseAulas = useMemo(() => CURSOS.slice(5), []);
 
   // filtro de cada seção mantendo ordem
   const filtro = (arr) => {
@@ -301,7 +342,7 @@ export default function ConteudoPage() {
   };
 
   const masterFiltered = useMemo(() => filtro(baseMaster), [busca, baseMaster]);
-  const aulasFiltered  = useMemo(() => filtro(baseAulas),  [busca, baseAulas]);
+  const aulasFiltered = useMemo(() => filtro(baseAulas), [busca, baseAulas]);
 
   return (
     <main className="min-h-screen w-full bg-[#0D0A0B] text-white overflow-x-hidden">
@@ -310,9 +351,11 @@ export default function ConteudoPage() {
         <div className=" max-w-[1330px] flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4">
           <div className="text-2xl sm:text-3xl font-semibold">
             Cursos <span className="text-[#FF2C64]">enmoda+</span>
-            <h2 className="text-sm mt-2 font-light">Explore cursos exclusivos e construa sua trilha personalizada de aprendizado em moda.</h2>
+            <h2 className="text-sm mt-2 font-light">
+              Explore cursos exclusivos e construa sua trilha personalizada de aprendizado em moda.
+            </h2>
           </div>
-          
+
           <div className="flex-1" />
           <input
             value={busca}
@@ -360,4 +403,3 @@ export default function ConteudoPage() {
     </main>
   );
 }
-

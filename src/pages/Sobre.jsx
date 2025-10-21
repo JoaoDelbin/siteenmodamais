@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
-import { Calendar, Sparkles, Rocket, ArrowRight } from "lucide-react";
+import {
+  Calendar,
+  Sparkles,
+  Rocket,
+  ArrowRight,
+  CheckCircle2,
+  PartyPopper,
+  Building2,
+} from "lucide-react";
+import CTAButton from "../components/CTA"
 
-export default function Sobre() {
+export default function Sobre() { 
   return (
     <main className="min-h-screen w-full bg-[#0D0A0B] text-white">
+      {/* HERO */}
       <section className="relative overflow-hidden">
-        <div
-          className="pointer-events-none absolute inset-0"
-        />
+        <div className="pointer-events-none absolute inset-0" />
         <div className="relative max-w-[1200px] mx-auto px-6 pt-14 pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
@@ -30,27 +38,25 @@ export default function Sobre() {
                 </span>
               </div>
 
-              <div className="mt-7 flex gap-3">
-                <Link
-                  to="/#planos"
-                    className="font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
-                  QUERO FAZER PARTE
-                </Link>
-                <Link
-                  to="/conteudo"
-                  className="px-5 py-2 rounded-full border  border-white/10 hover:bg-white/5"
-                >
-                  Explorar cursos
-                </Link>
+              <div className="mt-7 flex-row text-center md:flex gap-3">
+                
+
+<CTAButton variant="primary" size="md" className='mb-2 md:mb-0'>
+  QUERO COMEÇAR AGORA
+</CTAButton>
+
+<CTAButton to="/conteudo" variant="outline" size="md">
+  ver cursos
+</CTAButton>
               </div>
             </div>
 
-           <div className="hidden md:block">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 self-start">
-              <StatChip number="+300" label="Aulas" />
-              <StatChip number="+25.000" label="Alunos" />
-              <StatChip number="+20" label="Anos de mercado" />
-            </div>
+            <div className="hidden md:block">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 self-start">
+                <StatChip number="+300" label="Aulas" />
+                <StatChip number="+25.000" label="Alunos" />
+                <StatChip number="+20" label="Anos de mercado" />
+              </div>
             </div>
           </div>
         </div>
@@ -59,11 +65,8 @@ export default function Sobre() {
       {/* HISTÓRIA + FUNDADOR */}
       <section>
         <div className="max-w-[1200px] mx-auto px-6 pb-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
           <div className="lg:col-span-2 rounded-2xl border border-white/5 bg-white/[0.03] p-6 md:p-8">
-            <h2 className="text-2xl md:text-[26px] font-extrabold">
-              A história que nos trouxe até aqui
-            </h2>
+            <h2 className="text-2xl md:text-[26px] font-extrabold">A história que nos trouxe até aqui</h2>
 
             <div className="mt-4 space-y-4 text-white/85 leading-relaxed">
               <p>
@@ -102,36 +105,121 @@ export default function Sobre() {
             <div className="text-xs uppercase tracking-wide text-white/60">Fundador</div>
 
             <div className="mt-4 flex flex-col gap-4 items-start">
+              <div className="w-full rounded-lg overflow-hidden border border-white/10 bg-white/[0.04]">
+                <img
+                  src="/about/fundador.jpg"
+                  alt="Airton Embacher"
+                  className="w-full h-[260px] object-cover md:h-[320px]"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src =
+                      "https://cdn.carreirafashion.com.br/site/imagens/quemsomos_fundador.jpg";
+                  }}
+                />
+              </div>
+              
 
-  <div className="w-full rounded-lg overflow-hidden border border-white/10 bg-white/[0.04]">
-    <img
-      src="/about/fundador.jpg"
-      alt="Airton Embacher"
-      className="w-full h-[260px] object-cover md:h-[320px]"
-      onError={(e) => {
-        e.currentTarget.onerror = null;
-        e.currentTarget.src =
-          "https://cdn.carreirafashion.com.br/site/imagens/quemsomos_fundador.jpg";
-      }}
-    />
+              <div>
+                <div className="text-lg font-extrabold leading-tight">Airton Embacher</div>
+                
+                <p className="mt-3 text-white/85 leading-relaxed">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae dolor et nunc
+                  condimentum placerat. Etiam lobortis hendrerit nisl id vestibulum...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<div className="mt-2 mb-4 text-center md:hidden">
+                
+
+<CTAButton variant="primary" size="md" className='mb-2 md:mb-0'>
+  QUERO COMEÇAR AGORA
+</CTAButton>
+              </div>
+     {/* === Hoje, a enmoda+ já reúne === */}
+<section>
+  <div className="max-w-[1200px] mx-auto px-6 pb-8">
+    <h3 className="text-2xl md:text-[26px] font-extrabold">
+      Hoje, a enmoda+ já reúne:
+    </h3>
+
+    <ul className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {[
+        "Mais de 300 aulas exclusivas, com professores que são referência no mercado.",
+        "Mentorias de carreira ao vivo e gravadas.",
+        "Comunidade ativa de profissionais e estudantes de moda.",
+        "Conteúdos que vão de design, varejo e branding até consultoria de imagem, sustentabilidade e inovação.",
+      ].map((t) => (
+        <li
+          key={t}
+          className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4"
+        >
+          
+          <span className="shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-full">
+            <CheckCircle2
+              aria-hidden
+              className="w-4 h-4 text-[#FF2C64]"
+              strokeWidth={2.4}
+            />
+          </span>
+
+          <span className="text-white/85 leading-relaxed">{t}</span>
+        </li>
+      ))}
+    </ul>
   </div>
+</section>
 
- 
-  <div>
-    <div className="text-lg font-extrabold leading-tight">Airton Embacher</div>
-    <div className="text-xs text-white/70">Idealizador da EnModa e da enmoda+</div>
-    <p className="mt-3 text-white/85 leading-relaxed">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae dolor et nunc
-      condimentum placerat. Etiam lobortis hendrerit nisl id vestibulum...
-    </p>
-  </div>
-</div>
+<div className="mt-2 mb-4 text-center md:hidden">
+                
 
+<CTAButton variant="primary" size="md" className='mb-2 md:mb-0'>
+  QUERO COMEÇAR AGORA
+</CTAButton>
+              </div>
+
+              
+
+      {/* === NOVA SEÇÃO: PRIMEIROS PASSOS E CONQUISTAS === */}
+      <section>
+        <div className="max-w-[1200px] mx-auto px-6 pb-12">
+          <h3 className="text-2xl md:text-[26px] font-extrabold">Primeiros passos e conquistas</h3>
+
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* SPFW */}
+            <div className="rounded-2xl border border-white/5 bg-gradient-to-br from-[#171417] via-[#141214] to-[#121012] p-5">
+              <div className="flex items-center gap-3">
+                <span className="inline-grid place-items-center w-9 h-9 rounded-full bg-white/10 border border-white/10">
+                  <PartyPopper className="w-5 h-5 text-[#FF2C64]" />
+                </span>
+                <div className="text-lg font-extrabold">Experiência no SPFW</div>
+              </div>
+              <p className="mt-3 text-white/85 leading-relaxed">
+                Levamos os <strong>5 primeiros assinantes</strong> da plataforma para viver uma experiência
+                inesquecível no <strong>São Paulo Fashion Week</strong>.
+              </p>
+            </div>
+
+            {/* Riachuelo */}
+            <div className="rounded-2xl border border-white/5 bg-gradient-to-br from-[#171417] via-[#141214] to-[#121012] p-5">
+              <div className="flex items-center gap-3">
+                <span className="inline-grid place-items-center w-9 h-9 rounded-full bg-white/10 border border-white/10">
+                  <Building2 className="w-5 h-5 text-[#FF2C64]" />
+                </span>
+                <div className="text-lg font-extrabold">Formação corporativa</div>
+              </div>
+              <p className="mt-3 text-white/85 leading-relaxed">
+                Em menos de um ano, fomos responsáveis pelo <strong>treinamento do time de trainees da Riachuelo</strong>,
+                uma das maiores varejistas de moda do Brasil.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      
+      {/* COMPROMISSO */}
       <section>
         <div className="max-w-[1200px] mx-auto px-6 pb-16">
           <div className="rounded-2xl border border-white/5 bg-gradient-to-r from-[#131113] via-[#141214] to-[#121011] p-6 md:p-8">
@@ -155,8 +243,7 @@ export default function Sobre() {
   );
 }
 
-
-
+/* === helpers === */
 function StatChip({ number, label }) {
   return (
     <div className="rounded-xl bg-black/[0.04] border border-black/10 px-6 py-4 text-center shadow-[0_4px_12px_rgba(255,45,85,0.3)]">

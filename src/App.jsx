@@ -1,18 +1,20 @@
 import { Routes, Route } from "react-router-dom";
-
+import ScrollToTop from "./components/ScrollTop.jsx";
 import CourseMarquee from "./components/CourseMarquee";
 import CommunityTransform from "./components/CommunityTransform";
 import AccessSection from "./components/AccessSection";
 import PhoneVerifyBar from "./components/PhoneVerifyBar";
 import ConhecaEnmoda from "./components/ConhecaEnmoda";
 import BenefitsCarousel from "./components/BenefitsCarousel";
-import FaqSection from "./components/FaqSection";
+import FaqSection, { FAQ_ALL } from "./components/FaqSection.jsx";
 import PlansSection from "./components/planos";
 import Header from "./components/nav";
 import ConteudoPage from "./pages/ConteudoPage.jsx";
 import CourseDetail from "./pages/CourseDetail.jsx";
 import Assinantes from "./pages/Assinantes.jsx";
 import Sobre from "./pages/Sobre.jsx";
+import Duvidas from "./pages/Duvidas.jsx";
+import Assinatura from "./pages/Assinatura.jsx";
 
 /* ===== Home ===== */
 function Home() {
@@ -90,7 +92,7 @@ function Home() {
         <ConhecaEnmoda />
       </section>
       <section>
-        <FaqSection />
+        <FaqSection items={FAQ_ALL.slice(0, 3)} />
       </section>
       <section>
         <PhoneVerifyBar />
@@ -104,12 +106,15 @@ export default function App() {
   return (
     <div className="bg-[#0D0A0B] min-h-screen">
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/conteudo" element={<ConteudoPage />} />
         <Route path="/conteudo/:id" element={<CourseDetail />} />
+        <Route path="/assinatura" element={<Assinatura />} />
          <Route path="/assinantes" element={<Assinantes />} />
          <Route path="/sobre" element={<Sobre />} />
+         <Route path="/duvidas" element={<Duvidas />} />
         <Route path="*" element={<Home />} /> {/* fallback */}
       </Routes>
     </div>
