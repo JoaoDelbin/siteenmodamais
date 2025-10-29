@@ -133,7 +133,7 @@ export default function AulasAoVivo() {
   return (
     <section className="mt-10">
       <div className="flex items-end justify-between mb-3">
-        <h2 className="text-xl sm:text-2xl font-extrabold">
+        <h2 className="text-xl sm:text-2xl font-bold">
           +{itens.length} Aulas ao vivo
         </h2>
       </div>

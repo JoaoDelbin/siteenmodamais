@@ -52,7 +52,7 @@ export default function CourseDetail() {
 
           {/* TEXTO */}
           <div className="flex flex-col md:h-full">
-            <h1 className="text-3xl md:text-4xl font-extrabold leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight">
               {course.title}
             </h1>
 
@@ -96,9 +96,9 @@ export default function CourseDetail() {
         {/* Professor(a) */}
         {(course.teacher || course.teacherBio || course.teacherId) && (
           <section className="mt-10 md:mt-12">
-            <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6 shadow-[0_0_24px_rgba(255,44,100,0.08)]">
-              <div className="grid grid-cols-[64px,1fr] sm:grid-cols-[80px,1fr] gap-4 items-start">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden ring-2 ring-[#FF2C64]/50 bg-white/10">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.01] p-5 sm:p-6 shadow-[0_0_24px_rgba(255,44,100,0.3)]">
+              <div className="grid grid-cols-[80px,2fr] sm:grid-cols-[160px,1fr] gap-4 items-start">
+                <div className="w-30 h-50 md:w-30 md:h-60 rounded overflow-hidden  bg-white/10">
                   <img
                     src={
                       fotoProf ||
@@ -113,7 +113,7 @@ export default function CourseDetail() {
                   <div className="text-xs uppercase tracking-wide text-white/60">
                     Professor(a)
                   </div>
-                  <h3 className="text-lg sm:text-xl font-extrabold mt-0.5">
+                  <h3 className="text-lg sm:text-xl font-bold mt-0.5">
                     {course.teacher || "—"}
                   </h3>
 

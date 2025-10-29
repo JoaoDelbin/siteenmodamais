@@ -96,7 +96,7 @@ function useWarmImageCache(urls, { concurrency = 4 } = {}) {
 }
 
 /* ===================== CARD ===================== */
-const EAGER_QTD = 6; // quantos primeiros carregar como eager/high
+const EAGER_QTD = 8; // quantos primeiros carregar como eager/high
 function CardCurso({ curso, idx = 0, onBeforeOpen }) {
   const eager = idx < EAGER_QTD;
 
@@ -242,7 +242,7 @@ function CarouselSection({
   return (
     <section className="mt-8">
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-xl sm:text-2xl font-extrabold">{titulo}</h2>
+        <h2 className="text-xl sm:text-2xl font-bold">{titulo}</h2>
       </div>
 
       <div className="relative">
@@ -347,7 +347,7 @@ export default function ConteudoPage() {
   return (
     <main className="min-h-screen w-full bg-[#0D0A0B] text-white overflow-x-hidden">
       <div className="max-w-[1600px] mx-auto px-6 py-8">
-        {/* título + busca */}
+       
         <div className=" max-w-[1330px] flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4">
           <div className="text-2xl sm:text-3xl font-semibold">
             Cursos <span className="text-[#FF2C64]">enmoda+</span>
@@ -368,7 +368,7 @@ export default function ConteudoPage() {
         {/* MASTERCLASSES */}
         {masterFiltered.length > 0 && (
           <CarouselSection
-            titulo="Master classes"
+            titulo="Masterclasses"
             items={masterFiltered}
             storageKey="enmoda:pos:master"
             urlParam="posM"

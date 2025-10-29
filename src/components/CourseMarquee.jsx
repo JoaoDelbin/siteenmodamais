@@ -35,7 +35,7 @@ function TrackItems({ items, ariaHidden = false }) {
           <div className="aspect-[31/60] w-full rounded-xl bg-gray-300" />
           {/* so por a imagem aqui dps
             <img src={url} alt={c.title} className="aspect-[31/60] w-full object-cover rounded-xl" />
-            // ou object-contain + bg pra não cortar
+            // ou object-contain + bg pra n cortar
           */}
         </div>
       ))}

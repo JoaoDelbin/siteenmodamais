@@ -15,8 +15,9 @@ import Assinantes from "./pages/Assinantes.jsx";
 import Sobre from "./pages/Sobre.jsx";
 import Duvidas from "./pages/Duvidas.jsx";
 import Assinatura from "./pages/Assinatura.jsx";
+import Enterprise from "./pages/Enterprise.jsx";
 
-/* ===== Home ===== */
+
 function Home() {
   return (
     <main className="w-full bg-[#0D0A0B] text-gray-100 min-h-screen font-sans">
@@ -33,9 +34,9 @@ function Home() {
           </p>
 
           <div className="mt-6 flex flex-col items-center gap-3 md:flex-row md:justify-center md:gap-4">
-            <button className="font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
+            <a href="assinatura/#planosass" className="font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
               QUERO COMEÇAR AGORA
-            </button>
+            </a>
 
             <div className="flex items-center gap-1">
               <div className="flex -space-x-2.5">
@@ -101,7 +102,7 @@ function Home() {
   );
 }
 
-/* ===== Header + Rotas ===== */
+/* ===== Header e Rotas ===== */
 export default function App() {
   return (
     <div className="bg-[#0D0A0B] min-h-screen">
@@ -113,9 +114,10 @@ export default function App() {
         <Route path="/conteudo/:id" element={<CourseDetail />} />
         <Route path="/assinatura" element={<Assinatura />} />
          <Route path="/assinantes" element={<Assinantes />} />
+         <Route path="/enterprise" element={<Enterprise />} />
          <Route path="/sobre" element={<Sobre />} />
          <Route path="/duvidas" element={<Duvidas />} />
-        <Route path="*" element={<Home />} /> {/* fallback */}
+        <Route path="*" element={<Home />} /> 
       </Routes>
     </div>
   );

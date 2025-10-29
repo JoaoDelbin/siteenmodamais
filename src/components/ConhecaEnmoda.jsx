@@ -41,7 +41,7 @@ function Counter({ from = 0, to = 300, duration = 2000, prefix = "+", suffix = "
   return (
     <div
       ref={ref}
-      className="text-xl md:text-3xl font-bold leading-none text-[#FF2C64]"
+      className="text-xl md:text-2xl font-bold leading-none text-[#FF2C64]"
     >
       {prefix}
       {formatPt(val)}
@@ -97,25 +97,25 @@ export default function ConhecaEnmoda({ imageSrc = laptop }) {
               </p>
             </div>
 
-            {/* Números + CTA */}
+           
             <div className="mt-6 md:mt-10">
               <div className="text-white/70 mb-5 md:mb-4 text-sm">Números que inspiram confiança:</div>
 
-              <div className="grid md:grid-cols-3 gap-6 md:flex md:gap-4">
+              <div className="grid grid-cols-3 gap-4 ">
                 {stats.map((s, idx) => (
                   <div
                     key={idx}
                     className="
-                      md:min-w-[200px] rounded-xl
+                      md:min-w-[160px] rounded-xl
                       min-h-[80px]
+                      max-w-[180px]
+                      px-2 py-6 md:px-5 md:py-4 text-center
                       
-                      px-3 py-2 md:px-5 md:py-4 text-center
-                      ring-1 ring-[#FF2C64]
-                      shadow-[0_0_6px_4px_rgba(255,44,100,0.20)]
+                      shadow-[0_0_6px_4px_rgba(255,44,100,0.40)]
                     "
                   >
                     <Counter to={s.to} prefix="+" />
-                    <div className="mt-2 text-nowrap text-sm md:text-base uppercase tracking-wide text-white/80 font-medium md:font-semibold">
+                    <div className="mt-1 text-wrap text-sm uppercase tracking-wide text-white/80 font-medium md:font-semibold">
                       {s.labelTop}
                     </div>
                   </div>

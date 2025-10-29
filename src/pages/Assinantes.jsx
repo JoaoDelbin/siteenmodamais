@@ -84,7 +84,7 @@ const TESTIMONIALS = [
 
 function Card({ t, onVideo }) {
   return (
-    <div className="h-full rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6 flex flex-col justify-between shadow-[0_0_24px_rgba(255,44,100,0.05)]">
+    <div className="h-full rounded-2xl border border-white/5 bg-[#110E0F] p-5 sm:p-6 flex flex-col justify-between shadow-[0_0_10px_rgba(255,44,100,0.2)]">
       <div>
         <div className="text-xl leading-snug">
           <span className="text-[#FF2C64]">“</span> {t.quote} <span className="text-[#FF2C64]">”</span>
@@ -115,19 +115,19 @@ export default function Assinantes() {
     <main className="min-h-screen w-full bg-[#0D0A0B] text-white">
       <div className="max-w-[1200px] mx-auto px-6 pt-10 pb-14">
         <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-extrabold">O que dizem nossos assinantes</h1>
+          <h1 className="text-3xl md:text-5xl font-bold">O que dizem nossos assinantes</h1>
           <p className="mt-4 text-white/85 leading-relaxed">
             Na enmoda+, cada história de aprendizado é também uma história de transformação. Nossos alunos já conquistaram novas posições no mercado,
             abriram seus próprios negócios e encontraram clareza de carreira ao estudar com os maiores experts da moda.
           </p>
           <p className="mt-3 text-white/80">Veja como a enmoda+ tem feito a diferença na vida de quem decidiu investir em si mesmo.</p>
           <p className="mt-1 text-white/70 italic">E o próximo depoimento pode ser o seu.</p>
-          <a href="/#planos" className="inline-block mt-6 px-6 py-2 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]">
+          <a href="assinatura#planosass" className="inline-block mt-6 px-6 py-2 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]">
             Quero fazer parte da Enmoda+
           </a>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
           {TESTIMONIALS.map((t) => (
             <Card key={t.id} t={t} onVideo={(src) => setVideoSrc(src)} />
           ))}

@@ -43,7 +43,7 @@ export function DiferenciaisSection() {
   ];
 
   const positivos = [
-    "Cursos 100% moda (design, consultoria, varejo, comunicação, negócios)",
+    "Cursos 100% de moda (design, consultoria, varejo, comunicação, negócios)",
     "Professores que estão no mercado hoje",
     "Networking e comunidade exclusiva",
     "Aulas ao vivo + biblioteca gravada",
@@ -68,7 +68,7 @@ export function DiferenciaisSection() {
           >
           
 
-            {/* enmoda+ */}
+          
             <motion.div
               variants={fadeUpSoft}
               className="rounded-xl bg-[#110E0F] border-l-2 border-[#FF2C64]
@@ -87,13 +87,13 @@ export function DiferenciaisSection() {
 
             
             </motion.div>
-              {/* Tradicionais */}
+             
             <motion.div
               variants={fadeUpSoft}
               className="rounded-xl bg-[#110E0F] border-l-2 border-white/20
                          pt-2 pb-2 p-3 md:p-7 max-w-[560px] w-full"
             >
-              <h3 className="text-xl md:text-2xl font-semibold mb-4">Plataformas tradicionais</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">Outras plataformas</h3>
               <ul className="space-y-5 text-[15px] md:text-xl text-white/80">
                 {negativos.map((item) => (
                   <li key={item} className="flex gap-2 text-white/75">

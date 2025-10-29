@@ -7,7 +7,7 @@ const COURSES = [
     teacherId: "rener-oliveira",
     teacherPhoto: "rener-oliveira.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta, lorem non facilisis tincidunt, mauris nunc pharetra justo, ac convallis nisl augue ac odio. Integer id nisi purus.",
+      "Rener Oliveira é jornalista e especialista em Comunicação, Marcas e Consumo, com uma longa trajetória na moda iniciada em uma multimarcas no interior do Rio Grande do Norte. Mudou-se para Natal aos 15 anos, onde aprofundou os estudos em moda. Graduou-se em Jornalismo (Universidade Potiguar, 2019) e pós-graduou-se em 2020. Trabalhou com Daniela Falcão na plataforma NORDESTESSE e ganhou reconhecimento nacional, sendo destaque na Glamour Brasil e citado na ELLE Brasil e outros veículos. Atualmente, cria conteúdo crítico e inovador nas redes sobre a indústria da moda.",
     tagline: "Caminhos para o jornalismo de moda e sua evolução.",
     learn: []
   },
@@ -19,7 +19,7 @@ const COURSES = [
     teacherId: "andre-carvalhal",
     teacherPhoto: "andre-carvalhal.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed sem vitae dui finibus efficitur. Aliquam quis turpis eget metus molestie fermentum.",
+      "Graduado em Publicidade e Jornalismo e pós-graduado em Marketing Digital, com especialização em design para sustentabilidade. Palestrante e professor (IED, ESPM, FGV), atuou como consultor para Grendene, Unilever, Coca-Cola, Do Bem, entre outras. É escritor e colunista (Carta Capital e Veja Rio) e autor de bestsellers como \"A Moda Imita a Vida\" e \"Moda com Propósito\". Finalista do Prêmio Jabuti 2019 com \"Viva o Fim\" e autor de \"Como salvar o futuro\". Apresenta e colabora em programas do GNT e TV Brasil.",
     tagline: "Atualize propósito e valores na moda contemporânea.",
     learn: []
   },
@@ -31,7 +31,7 @@ const COURSES = [
     teacherId: "joao-braga",
     teacherPhoto: "joao-braga.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus, magna at tempus vulputate, massa leo mattis risus, a fringilla lacus libero eget ex.",
+      "Mestre em História da Ciência (PUC/SP). Especialista em História da Arte (FAAP/SP) e em História da Indumentária e da Moda (FESPSP). Especialista em Histoire du Costume pela École Supérieure des Arts et Technique de la Mode (ESMOD – Paris). Membro da Academia Brasileira da Moda. Autor de \"História da Moda. Uma Narrativa\", da série \"Reflexões sobre Moda\" (I–IV) e coautor de \"História da Moda no Brasil – Das Influências às Autorreferências\", entre outros. Professor de Estética, História da Moda, Cultura de Moda, História da Arte, Joalheria e Moda no Brasil; curador de exposições.",
     tagline: "Do surgimento da moda ao cenário atual.",
     learn: []
   },
@@ -43,7 +43,7 @@ const COURSES = [
     teacherId: "luciana-ulrich",
     teacherPhoto: "luciana-ulrich.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nunc in luctus bibendum, neque libero viverra dui, sit amet luctus justo mi vel magna.",
+      "Luciana Ulrich é pioneira em Coloração Pessoal no Brasil e no estudo da miscigenação da pele brasileira. Com mais de 15 anos de atuação em Consultoria de Cores, já realizou mais de 10.000 testes de coloração pessoal e formou mais de 6.000 profissionais.",
     tagline: "Visão mercadológica e princípios de aplicação de cor.",
     learn: []
   },
@@ -55,7 +55,7 @@ const COURSES = [
     teacherId: "andreza-ramos",
     teacherPhoto: "andreza-ramos.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae dictum arcu, vitae convallis massa. Pellentesque dignissim, nisl a viverra pretium, augue leo eleifend lacus.",
+      "Especialista em comunicação de moda e consultora de estilo, Andreza Ramos acredita no vestir como expressão criativa e cultural. Com olhar atento à diversidade étnico-cultural, ajuda mulheres reais a se sentirem confiantes e empoderadas, celebrando todos os corpos de forma inclusiva e autêntica. Seu conteúdo une moda, história, cultura e diversão para tornar o estilo acessível e significativo.",
     tagline: "Atenda diferentes corpos, estilos e identidades.",
     learn: []
   },
@@ -88,7 +88,7 @@ const COURSES = [
     teacherId: "tata-lanzoni",
     teacherPhoto: "tata-lanzoni.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar, lorem et condimentum vehicula, justo augue porttitor lectus, at fermentum dolor lacus non urna.",
+      "Tatá Lanzoni é arquiteta, consultora de imagem e entusiasta da neurociência, com ampla experiência na área. Vice-presidente associada da AICI Brasil e docente na enmoda, possui especializações em cores, formas e psicologia e é criadora do jogo Yin Yang Cores e Estilo. Seu objetivo é auxiliar pessoas a expressarem-se com autenticidade e confiança.",
     tagline:
       "Com as técnicas e insights compartilhados por Tatá Lanzoni, você estará preparado para oferecer uma consultoria de imagem completa e personalizada, ajudando seus clientes a alcançarem a melhor versão de si mesmos. ",
     learn: [
@@ -112,7 +112,7 @@ const COURSES = [
     teacherId: "tatty-camargo",
     teacherPhoto: "tatty-camargo.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non mauris nec turpis aliquet rhoncus. Duis et efficitur arcu, vitae euismod metus.",
+      "Tatty Camargo tem trajetória singular. Educada em escola antroposófica, desenvolveu desde cedo forte ligação com as artes e a construção de competências, o que lhe deu um olhar que vai além das regras. Iniciou-se em ilustração e fotografia, passando por composições e publicidade. Formou-se também em Fisioterapia, o que ampliou sua compreensão do corpo e da fisiologia do movimento — base valiosa para o visagismo. Graduou-se em Design de Moda (Faculdade Santa Marcelina) e trabalhou por anos com calçados e joias. Apaixonou-se por maquiagem em curso no Senac, integrando depois a primeira turma de visagismo em São Paulo nos anos 2000. É formada em coloração pessoal nos métodos sazonal e expandido, e em tonal visagismo (Senac e Philip Hallawell), unindo moda e beleza. Atua com consultoria desde os anos 2000 e, desde 2005, ministra turmas no Senac, onde desenvolveu diversos cursos — base hoje utilizada por toda a rede. Também dá cursos na Belas Artes de São Paulo e na enmoda. Em 2014, firmou parceria com a C&A em projeto de revistinhas com cases de clientes, desdobrado depois em blog. Acredita na individualidade como potencializadora e leva essa essência para todas as suas atividades.",
     tagline: "Crie um armário funcional e estiloso.",
     learn: [
       "O que é armário cápsula",
@@ -137,7 +137,7 @@ const COURSES = [
     teacherId: "tatty-camargo",
     teacherPhoto: "tatty-camargo.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet, quam quis mattis auctor, libero turpis finibus lacus, vitae pharetra lacus elit at odio.",
+      "Tatty Camargo é consultora de imagem e especialista em coloração pessoal (métodos sazonal e expandido), com formação em tonal visagismo pelo Senac e pelo mestre Philip Hallawell. Atuante desde os anos 2000, reúne experiência em moda, beleza, ilustração e fotografia, além de formação em Fisioterapia — combinação que aprofunda sua leitura do corpo, do movimento e da linguagem visual aplicada ao visagismo.",
     tagline: "Identifique as cores que valorizam você ou seu cliente.",
     learn: [
       "As cores",
@@ -160,7 +160,7 @@ const COURSES = [
     teacherId: "tatty-camargo",
     teacherPhoto: "tatty-camargo.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia, nibh non iaculis gravida, nisl leo dictum neque, vel auctor magna ipsum id arcu.",
+      "Consultora de imagem com atuação desde os anos 2000, Tatty Camargo reúne formação em Design de Moda, Fisioterapia, coloração pessoal (sazonal e expandido) e tonal visagismo (Senac e Philip Hallawell). Docente desde 2005 no Senac — onde também desenvolveu cursos adotados por toda a rede —, atua ainda na Belas Artes de São Paulo e na enmoda, conectando técnicas de análise facial com linguagem visual, maquiagem e estilo.",
     tagline: "Valorize a beleza única com técnica e prática.",
     learn: [
       "O que é visagismo",
@@ -182,7 +182,7 @@ const COURSES = [
     teacherId: "otavio-lima",
     teacherPhoto: "otavio-lima.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan eros vitae gravida commodo. Nunc sit amet est non elit molestie efficitur.",
+      "Especialista em Varejo, Otávio Lima iniciou sua trajetória em 1994 como gestor nas empresas Varal, Zoomp, Zapping e Miss Sixty. Mestre em História da Ciência (PUC-SP) e com MBA em Varejo de Moda (UAM), desde 2003 atua como consultor comercial para varejo e atacado no Brasil (como Glória Coelho) e no exterior (Lolita/Uruguai, Harley Davidson). Coordenou o MBA em Negócios e Varejo de Moda e lecionou na EAADM, UAM e Senac/SP. Ministra cursos de pesquisa de varejo para brasileiros em Nova York e é professor do Centro Universitário Belas Artes de São Paulo e da enmoda.",
     tagline:
       "Transforme o espaço comercial e a experiência de compra.",
     learn: [
@@ -215,7 +215,7 @@ const COURSES = [
     teacherId: "otavio-lima",
     teacherPhoto: "otavio-lima.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque suscipit, justo at malesuada tincidunt, magna elit tempor lorem, in facilisis lectus nulla id nibh.",
+      "Especialista em Varejo com carreira iniciada em 1994 (Varal, Zoomp, Zapping, Miss Sixty). Mestre em História da Ciência pela PUC-SP e MBA em Varejo de Moda pela UAM. Desde 2003, consultor comercial para empresas de varejo e atacado no Brasil (Glória Coelho) e no exterior (Lolita/Uruguai, Harley Davidson). Atuou como coordenador e professor em instituições como EAADM, UAM e Senac/SP, ministra cursos de pesquisa de varejo em Nova York e é professor no Centro Universitário Belas Artes e na enmoda.",
     tagline:
       "Apoie a construção de marca e sortimento com ciência do consumo.",
     learn: [
@@ -243,7 +243,7 @@ const COURSES = [
     teacherId: "maya-mattiazzo",
     teacherPhoto: "maya-mattiazzo.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat, nibh quis bibendum finibus, ipsum velit efficitur arcu, et feugiat est odio quis augue.",
+      "Formada em Negócios da Moda e pós-graduada em Gestão de E-commerce, com especialização em Fashion Business e Marketing Digital. Atua há mais de 15 anos no mercado de moda, sendo 10 dedicados a estratégias digitais. Passou por diversos players e modelos de negócio (B2C, B2B e marketplaces). É sócia da Mind-e, empresa especializada em soluções digitais para negócios.",
     tagline: "Entenda o futuro digital aplicado à moda.",
     learn: [
       "Surgimento do Metaverso",
@@ -262,7 +262,7 @@ const COURSES = [
     teacherId: "otavio-lima",
     teacherPhoto: "otavio-lima.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec suscipit neque, vel rhoncus lacus. Curabitur tincidunt mi sed auctor dapibus.",
+      "Otávio Lima é especialista em Varejo desde 1994, quando atuou como gestor em Varal, Zoomp, Zapping e Miss Sixty. Mestre em História da Ciência (PUC-SP) e com MBA em Varejo de Moda (UAM), é consultor desde 2003 para empresas brasileiras e internacionais (como Glória Coelho, Lolita/Uruguai e Harley Davidson). Coordenou MBA em Negócios e Varejo de Moda, lecionou na EAADM, UAM e Senac/SP, ministra cursos de pesquisa de varejo em Nova York e é professor no Centro Universitário Belas Artes e na enmoda.",
     tagline:
       "Estratégias para atrair, engajar e fidelizar no varejo de moda.",
     learn: [
@@ -284,7 +284,7 @@ const COURSES = [
     teacherId: "kareen-terenzzo",
     teacherPhoto: "kareen-terenzzo.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue vitae turpis interdum commodo. Cras a iaculis augue.",
+      "Profissional multifacetada, pesquisadora e estudiosa dedicada. Doutoranda em Estudos Feministas (Universidade de Coimbra), mestre em Comunicação e Práticas de Consumo (PPGCOM/ESPM) e pós-graduada em Administração Mercadológica (FAAP). Bacharel em Ciências Sociais (PUC-SP). Autora de pesquisas e artigos sobre comunicação, consumo, envelhecimento e gênero. Ampla experiência no varejo de moda (Vila Romana, VR Menswear, Ermenegildo Zegna, Calvin Klein, Arezzo) em planejamento, imprensa, produção, publicidade, web, mídias sociais, VM e pesquisa de mercado. Responsável pela entrada da Arezzo no ambiente digital em 2013. Desde então, dedica-se aos estudos de comunicação e gênero, construindo repertório e visão holística da comunicação como prática social e emancipatória.",
     tagline:
       "Planeje a comunicação de moda com consistência e impacto.",
     learn: [
@@ -307,7 +307,7 @@ const COURSES = [
     teacherId: "maya-mattiazzo",
     teacherPhoto: "maya-mattiazzo.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue, urna id faucibus pretium, risus lectus condimentum lacus, id tempus tellus libero at elit.",
+      "Profissional de Negócios da Moda, pós-graduada em Gestão de E-commerce e especialista em Fashion Business e Marketing Digital. Com mais de 15 anos no mercado — sendo 10 em estratégias digitais —, atuou em diferentes formatos (B2C, B2B e marketplaces). É sócia da Mind-e, onde desenvolve soluções digitais para negócios de moda.",
     tagline:
       "Entenda seu público e alinhe produto, mensagem e coleção.",
     learn: [
@@ -329,7 +329,7 @@ const COURSES = [
     teacherId: "muriel-campanha",
     teacherPhoto: "muriel-campanha.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer interdum, mi sed aliquam pellentesque, orci mi ultrices mauris, et finibus leo nunc vitae dolor.",
+      "Aos 18 anos, Muriel iniciou a carreira na Vogue, onde descobriu a paixão por materializar ideias e transformar conceitos em visual. Migrou para o mercado de produto, começando no grupo Vulcabrás (contribuindo com designs para a marca Rebook), passando pela Alpargatas e pelo grupo DASS, onde iniciou a marca Fila do zero, liderando equipes e transformando produtos. Depois, atuou por 7 anos na Adidas, adquirindo experiência vital em contexto de marca global.",
     tagline:
       "Metodologia prática para identificar e aplicar tendências.",
     learn: [
@@ -351,7 +351,7 @@ const COURSES = [
     teacherId: "otavio-lima",
     teacherPhoto: "otavio-lima.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+      "Especialista em Varejo desde 1994 (Varal, Zoomp, Zapping, Miss Sixty), Otávio Lima é mestre em História da Ciência (PUC-SP) e possui MBA em Varejo de Moda (UAM). Desde 2003, é consultor comercial para empresas de varejo e atacado no Brasil e no exterior (Glória Coelho, Lolita/Uruguai, Harley Davidson). Coordenou MBA de Negócios e Varejo de Moda, lecionou na EAADM, UAM e Senac/SP, ministra cursos de pesquisa de varejo em Nova York e é professor no Centro Universitário Belas Artes e na enmoda.",
     tagline: "Técnicas e VM para vender mais e melhor.",
     learn: [
       "O que é moda",
@@ -401,7 +401,7 @@ const COURSES = [
     teacherId: "marco-andreoni",
     teacherPhoto: "marco-andreoni.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida, elit non posuere consequat, quam sem lacinia augue, ac tristique risus massa id elit.",
+      "Professor e designer, Marco Andreoni atua na FAAP e lidera o projeto \"Alinhavando o Futuro 1\", que gera renda, autoestima e autonomia na comunidade ribeirinha da Reserva de Desenvolvimento Sustentável Rio Negro (AM). Visionário em Criação de Estamparia e Design de Moda, utiliza softwares avançados de imagem. Seu trabalho capacita a comunidade em confecção, integrando saberes tradicionais, moda, artesanato e design — referência nacional em inovação, sustentabilidade e impacto social.",
     tagline: "Crie estampas e efeitos inovadores em tecidos.",
     learn: [
       "O adorno",
@@ -421,7 +421,7 @@ const COURSES = [
     teacherId: "marco-andreoni",
     teacherPhoto: "marco-andreoni.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a tortor sit amet sapien dictum facilisis. Integer euismod orci ut nisi iaculis, id fringilla dui euismod.",
+      "Docente e designer com atuação na FAAP, Marco Andreoni é responsável pelo projeto \"Alinhavando o Futuro 1\" na Reserva de Desenvolvimento Sustentável Rio Negro (AM), integrando moda, artesanato e design para geração de renda e autonomia. Pioneiro no uso de softwares de imagem para estamparia, referencia-se por unir inovação técnica, educação e impacto socioambiental.",
     tagline: "Fundamentos e técnicas avançadas de design têxtil.",
     learn: [
       "O que é o tecido",
@@ -445,7 +445,7 @@ const COURSES = [
     teacherId: "marina-colerato",
     teacherPhoto: "marina-colerato.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue, mi non venenatis dapibus, lectus mi fermentum nibh, vitae pretium nisi nunc a lorem.",
+      "Bacharel em Design de Moda e mestre em Ciências Sociais (PUC-SP), Marina Colerato tem trajetória multidisciplinar guiada pelo pensamento sistêmico e por uma perspectiva ecofeminista. Fundadora do Instituto Modefica — jornalismo e pesquisa para justiça socioambiental —, liderou por oito anos projetos focados em redes produtivas, crise climática e alternativas de produção. Escreve para Le Monde Diplomatique, ELLE, Jacobin e Projeto Draft; colaborou com Reos Partners, Instituto Avon, Laudes Foundation, Grupo Soma e Melissa. Como palestrante e educadora, passou por eventos como Copenhagen Fashion Summit, Rio Ethical Fashion e Brasil Eco Fashion Week, e por instituições como FAAP, FGV, Senac, Sesc e EnModa. Integra o Núcleo de Pesquisa Interdisciplinar de Estudos Curdos (PUC-MG/CNPq), pesquisando o Movimento de Mulheres Curdas e Jineolojî.",
     tagline:
       "Integre sustentabilidade em toda a cadeia da moda.",
     learn: [
@@ -467,7 +467,7 @@ const COURSES = [
     teacherId: "giulia-falcone",
     teacherPhoto: "giulia-falcone.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet, lorem nec lobortis bibendum, diam nisl hendrerit enim, vel volutpat augue turpis in sapien.",
+      "Bacharel em História pela FFLCH-USP, Giulia Falcone é doutoranda em História Social-USP, bolsista da FAPESP. Realizou estágio no exterior na École des Hautes Études en Sciences Sociales (jan.–dez./2023). Especialista em história contemporânea, dedica-se à indústria têxtil e de moda, unindo pesquisa acadêmica rigorosa e paixão pelo tema.",
     tagline: "Contexto histórico para entender a moda de hoje.",
     learn: [
       "Início da história da moda",
@@ -485,7 +485,7 @@ const COURSES = [
     teacherId: "muriel-campanha",
     teacherPhoto: "muriel-campanha.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, libero eu volutpat tristique, nibh velit tincidunt quam, non ultricies turpis lacus nec justo.",
+      "Muriel iniciou a carreira aos 18 anos na Vogue, onde consolidou o desejo de materializar conceitos. Atuou no grupo Vulcabrás (designs para Rebook), na Alpargatas e no grupo DASS, onde iniciou a marca Fila do zero, liderando equipes e processos. Depois, passou 7 anos na Adidas, adquirindo repertório em uma marca global e aprofundando sua atuação em direção criativa e desenvolvimento de produto.",
     tagline:
       "Processos, pesquisa e estratégia para liderar projetos.",
     learn: [
@@ -511,7 +511,7 @@ const COURSES = [
     teacherId: "tatty-camargo",
     teacherPhoto: "tatty-camargo.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum molestie, nisl vitae interdum gravida, ipsum lacus vulputate ligula, ut rutrum enim ipsum non sem.",
+      "Consultora de imagem com trajetória iniciada nos anos 2000, Tatty Camargo reúne experiências em ilustração, fotografia, moda e beleza, aliadas à formação em Fisioterapia. É formada em Design de Moda (FASM), coloração pessoal (métodos sazonal e expandido) e tonal visagismo (Senac e Philip Hallawell). Desde 2005, ministra turmas no Senac — onde desenvolveu cursos adotados em toda a rede — e também leciona na Belas Artes/SP e na enmoda, ajudando profissionais a ingressarem no mercado com segurança.",
     tagline:
       "Entre no mercado de trabalho com confiança.",
     learn: [

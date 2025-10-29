@@ -5,7 +5,7 @@ import {
 
 const BENEFITS = [
   { icon: <CheckCircle className="w-6 h-6 text-[#FF2C64]" />, title: "Estude com os melhores", text: "Aprenda com experts que moldam a indústria da moda." },
-  { icon: <BookOpen className="w-6 h-6 text-[#FF2C64]" />, title: "Explore temas diferentes", text: "Design, marketing, comunicação, varejo e muito mais." },
+  { icon: <BookOpen className="w-6 h-6 text-[#FF2C64]" />, title: "Explore temas diferentes", text: "Consultoria de imagem, design, marketing, comunicação, varejo e muito mais." },
   { icon: <Heart className="w-6 h-6 text-[#FF2C64]" />, title: "Descubra novas paixões", text: "Encontre novos interesses e talentos." },
   { icon: <FileText className="w-6 h-6 text-[#FF2C64]" />, title: "Materiais complementares", text: "Conteúdo detalhado para aprofundar." },
   { icon: <Headphones className="w-6 h-6 text-[#FF2C64]" />, title: "Ouça enquanto pratica", text: "Transforme qualquer momento em estudo." },
@@ -15,7 +15,7 @@ const BENEFITS = [
 
 function Card({ icon, title, text }) {
   return (
-    <div className="shrink-0 w-[200px] h-[200px] md:w-[300px] md:h-[150px]"> 
+    <div className="shrink-0 w-[240px] h-[220px] md:w-[300px] md:h-[170px]"> 
       <div
         className="
           h-full rounded-xl bg-[#181516] border border-white/10 p-6
@@ -28,7 +28,7 @@ function Card({ icon, title, text }) {
           {title}
         </div>
         
-        <p className="mt-1 text-sm text-gray-300 leading-snug two-lines">
+        <p className="mt-1 text-sm text-gray-300 leading-snug three-lines">
           {text}
         </p>
       </div>

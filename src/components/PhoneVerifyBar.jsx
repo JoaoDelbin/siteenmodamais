@@ -3,9 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 const OFFICIAL_NUMBERS = [
   
-  "+55 (11) 91234-5678",
-  "55 11 93333 2222",
-  "(11) 99999-0000",
+   "+55 11 96596-3613", "+55 11 97644-7837", "11 97644-7837", "+55 11 99441-9063", "+55 11 99190-2755",
 ];
 
 export default function PhoneVerifyBar() {
@@ -72,7 +70,7 @@ return (
   <section className="w-full bg-gradient-to-r from-[#0D0A0B] via-[#171415] to-[#0D0A0B] text-white">
     <div className="max-w-[1440px] mx-auto px-6 py-5 pt-2 md:pt-8">
    
-      <h3 className="text-center text-2xl md:text-3xl font-extrabold">
+      <h3 className="text-center text-2xl md:text-3xl font-bold">
         Alguém da escola entrou em contato com você?
       </h3>
 
@@ -122,7 +120,7 @@ return (
         </button>
       </div>
 
-      {/* retorno */}
+      
       <div className="mt-2 min-h-[0.8rem] text-center" aria-live="polite">
         {status === "ok" && (
           <span className="inline-flex items-center gap-2 text-[13px] text-[#C2F738]">

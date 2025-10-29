@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
 
-/** ====== Perguntas completas ====== */
+
 export const FAQ_ALL = [
   {
     q: "Como funciona a plataforma?",
@@ -33,7 +33,7 @@ Cancelamento com reembolso integral disponível em até 7 dias após a contrata�
   },
 ];
 
-/** ====== Item visual (mesmo design) ====== */
+
 function Item({ idx, openIdx, setOpenIdx, q, a }) {
   const open = openIdx === idx;
 
@@ -71,12 +71,7 @@ function Item({ idx, openIdx, setOpenIdx, q, a }) {
   );
 }
 
-/** ====== Componente principal ====== 
- * props:
- *  - items?: Array<{q:string,a:string}>  -> se não passar, usa FAQ_ALL
- *  - initialOpen?: number (default 0)
- *  - showCtas?: boolean (default true)
- */
+
 export default function FaqSection({
   items,
   initialOpen = 0,
@@ -89,7 +84,7 @@ export default function FaqSection({
     <section className="w-full bg-[#0D0A0B] text-white">
       <div className="max-w-[1440px] mx-auto px-6 py-12 md:py-16">
         <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-extrabold">
+          <h2 className="text-2xl md:text-3xl font-bold">
             FAQ — <span className="text-[#FF2C64]">Perguntas rápidas</span>
           </h2>
           <p className="mt-2 text-sm md:text-[15px] text-white/70">

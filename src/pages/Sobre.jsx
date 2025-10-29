@@ -14,34 +14,34 @@ export default function Sobre() {
   return (
     <main className="min-h-screen w-full bg-[#0D0A0B] text-white">
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className="relative">
         <div className="pointer-events-none absolute inset-0" />
         <div className="relative max-w-[1200px] mx-auto px-6 pt-14 pb-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="text-center grid grid-cols-1 gap-8">
             <div>
-              <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-                Sobre a <span className="text-[#FF2C64]">enmoda+</span>
+              <h1 className="text-5xl md:text-7xl font-semibold leading-tight">
+                Sobre a <span className="text-[#FF2C64] font-light">enmoda+</span>
               </h1>
-              <p className="mt-4 text-white/85 text-lg max-w-3xl">
+              <p className="mt-4 text-white/85 text-lg">
                 Mais de 20 anos formando talentos e conectando pessoas que fazem a moda acontecer.
               </p>
 
-              <div className="mt-5 flex flex-wrap gap-2 text-sm">
-                <span className="px-3 py-1 rounded-full bg-white/[0.05] border border-white/10">
+              <div className="mt-5 flex flex-wrap gap-2 text-sm hidden ">
+                <span className="px-3 py-1 rounded-full bg-[#181516] ">
                   Pioneiros no e-learning de moda
                 </span>
-                <span className="px-3 py-1 rounded-full bg-white/[0.05] border border-white/10">
+                <span className="px-3 py-1 rounded-full bg-[#181516] ">
                   Streaming 100% moda
                 </span>
-                <span className="px-3 py-1 rounded-full bg-white/[0.05] border border-white/10">
+                <span className="px-3 py-1 rounded-full bg-[#181516]">
                   Comunidade & Mentorias
                 </span>
               </div>
 
-              <div className="mt-7 flex-row text-center md:flex gap-3">
+              <div className="mt-7 flex-row text-center">
                 
 
-<CTAButton variant="primary" size="md" className='mb-2 md:mb-0'>
+<CTAButton variant="primary" size="md" className='mb-3 md:mb-0 mr-4'>
   QUERO COMEÇAR AGORA
 </CTAButton>
 
@@ -51,13 +51,7 @@ export default function Sobre() {
               </div>
             </div>
 
-            <div className="hidden md:block">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 self-start">
-                <StatChip number="+300" label="Aulas" />
-                <StatChip number="+25.000" label="Alunos" />
-                <StatChip number="+20" label="Anos de mercado" />
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -65,8 +59,8 @@ export default function Sobre() {
       {/* HISTÓRIA + FUNDADOR */}
       <section>
         <div className="max-w-[1200px] mx-auto px-6 pb-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 rounded-2xl border border-white/5 bg-white/[0.03] p-6 md:p-8">
-            <h2 className="text-2xl md:text-[26px] font-extrabold">A história que nos trouxe até aqui</h2>
+          <div className="lg:col-span-2 rounded-2xl border border-white/5 bg-[#110E0F] p-6 md:p-8">
+            <h2 className="text-2xl md:text-3xl font-bold">A história que nos trouxe até aqui</h2>
 
             <div className="mt-4 space-y-4 text-white/85 leading-relaxed">
               <p>
@@ -79,9 +73,9 @@ export default function Sobre() {
               </p>
             </div>
 
-            {/* Timeline */}
+           
             <div className="mt-8 relative">
-              <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-white/10" />
+              <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-[#110E0F]" />
               <TimelineItem
                 icon={<Calendar className="w-4 h-4" />}
                 year="2004"
@@ -100,12 +94,12 @@ export default function Sobre() {
             </div>
           </div>
 
-          {/* Fundador */}
-          <div className="rounded-2xl border border-white/5 bg-white/[0.03] p-6 md:p-8">
+          
+          <div className="rounded-2xl border border-white/5 bg-[#110E0F] p-6 md:p-8">
             <div className="text-xs uppercase tracking-wide text-white/60">Fundador</div>
 
             <div className="mt-4 flex flex-col gap-4 items-start">
-              <div className="w-full rounded-lg overflow-hidden border border-white/10 bg-white/[0.04]">
+              <div className="w-full rounded-lg overflow-hidden border border-white/10 bg-[#110E0F]">
                 <img
                   src="/about/fundador.jpg"
                   alt="Airton Embacher"
@@ -120,7 +114,7 @@ export default function Sobre() {
               
 
               <div>
-                <div className="text-lg font-extrabold leading-tight">Airton Embacher</div>
+                <div className="text-lg font-bold leading-tight">Airton Embacher</div>
                 
                 <p className="mt-3 text-white/85 leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae dolor et nunc
@@ -134,14 +128,14 @@ export default function Sobre() {
 <div className="mt-2 mb-4 text-center md:hidden">
                 
 
-<CTAButton variant="primary" size="md" className='mb-2 md:mb-0'>
-  QUERO COMEÇAR AGORA
-</CTAButton>
+      <CTAButton variant="primary" size="md" className='mb-2 md:mb-0'>
+        QUERO COMEÇAR AGORA
+      </CTAButton>
               </div>
-     {/* === Hoje, a enmoda+ já reúne === */}
+     
 <section>
   <div className="max-w-[1200px] mx-auto px-6 pb-8">
-    <h3 className="text-2xl md:text-[26px] font-extrabold">
+    <h3 className="text-2xl md:text-3xl font-bold">
       Hoje, a enmoda+ já reúne:
     </h3>
 
@@ -154,7 +148,7 @@ export default function Sobre() {
       ].map((t) => (
         <li
           key={t}
-          className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4"
+          className="flex items-start gap-3 rounded-xl border border-white/10 bg-[#110E0F] p-4"
         >
           
           <span className="shrink-0 inline-flex items-center justify-center w-5 h-5 rounded-full">
@@ -182,19 +176,19 @@ export default function Sobre() {
 
               
 
-      {/* === NOVA SEÇÃO: PRIMEIROS PASSOS E CONQUISTAS === */}
+      
       <section>
         <div className="max-w-[1200px] mx-auto px-6 pb-12">
-          <h3 className="text-2xl md:text-[26px] font-extrabold">Primeiros passos e conquistas</h3>
+          <h3 className="text-2xl md:text-[26px] font-bold">Primeiros passos e conquistas</h3>
 
           <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* SPFW */}
-            <div className="rounded-2xl border border-white/5 bg-gradient-to-br from-[#171417] via-[#141214] to-[#121012] p-5">
+            <div className="rounded-2xl border border-white/5 bg-[#110E0F] p-5">
               <div className="flex items-center gap-3">
-                <span className="inline-grid place-items-center w-9 h-9 rounded-full bg-white/10 border border-white/10">
+                <span className="inline-grid place-items-center w-9 h-9 rounded-full bg-[#110E0F] border border-white/10">
                   <PartyPopper className="w-5 h-5 text-[#FF2C64]" />
                 </span>
-                <div className="text-lg font-extrabold">Experiência no SPFW</div>
+                <div className="text-lg font-bold">Experiência no SPFW</div>
               </div>
               <p className="mt-3 text-white/85 leading-relaxed">
                 Levamos os <strong>5 primeiros assinantes</strong> da plataforma para viver uma experiência
@@ -203,12 +197,12 @@ export default function Sobre() {
             </div>
 
             {/* Riachuelo */}
-            <div className="rounded-2xl border border-white/5 bg-gradient-to-br from-[#171417] via-[#141214] to-[#121012] p-5">
+            <div className="rounded-2xl border border-white/5 bg-[#110E0F] p-5">
               <div className="flex items-center gap-3">
-                <span className="inline-grid place-items-center w-9 h-9 rounded-full bg-white/10 border border-white/10">
+                <span className="inline-grid place-items-center w-9 h-9 rounded-full bg-[#110E0F] border border-white/10">
                   <Building2 className="w-5 h-5 text-[#FF2C64]" />
                 </span>
-                <div className="text-lg font-extrabold">Formação corporativa</div>
+                <div className="text-lg font-bold">Formação corporativa</div>
               </div>
               <p className="mt-3 text-white/85 leading-relaxed">
                 Em menos de um ano, fomos responsáveis pelo <strong>treinamento do time de trainees da Riachuelo</strong>,
@@ -219,10 +213,10 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* COMPROMISSO */}
+     
       <section>
         <div className="max-w-[1200px] mx-auto px-6 pb-16">
-          <div className="rounded-2xl border border-white/5 bg-gradient-to-r from-[#131113] via-[#141214] to-[#121011] p-6 md:p-8">
+          <div className="rounded-2xl border border-white/5 bg-[#110E0F] p-6 md:p-8">
             <h3 className="text-xl md:text-2xl font-bold">Nosso compromisso</h3>
             <p className="mt-3 text-white/85">
               Aproximar você do mercado com aprendizado prático, acessível e de qualidade.
@@ -259,7 +253,7 @@ function TimelineItem({ icon, year, text }) {
       <div className="absolute left-3 top-5 w-6 h-6 rounded-full bg-[#0D0A0B] border border-white/10 grid place-items-center text-white/80">
         {icon}
       </div>
-      <div className="text-[#FF2C64] font-extrabold">{year}</div>
+      <div className="text-[#FF2C64] font-bold">{year}</div>
       <div className="text-white/85 mt-1">{text}</div>
     </div>
   );

@@ -39,6 +39,14 @@ const CATEGORIAS = [
       {
         q: "Posso cancelar a qualquer momento?",
         a: "Plano Mensal: não possui fidelidade. A renovação é automática, mas você pode cancelar quando quiser. Plano Anual: garante o melhor custo-benefício, com acesso contínuo por 12 meses. Em ambos os planos, você pode solicitar cancelamento com reembolso integral em até 7 dias após a contratação (direito de arrependimento)."
+      },
+      {
+        q: "Como faço para cancelar minha assinatura?",
+        a: `Para cancelar sua assinatura, basta acessar o link: /cancelamento 
+
+Preencha o formulário com seus dados e nossa equipe realizará o cancelamento em até 48 horas úteis. 
+
+IMPORTANTE: Se você assinou o plano anual, o cancelamento só é permitido dentro do prazo legal de 7 dias após a contratação. Após esse período, o plano segue ativo até o fim do ciclo contratado, assim como em outras plataformas de streaming no Brasil.`
       }
     ]
   },
@@ -74,7 +82,7 @@ function AcordeaoItem({ q, a, aberto, onToggle }) {
       </button>
       {aberto && (
         <div className="px-4 md:px-5 pb-4 -mt-1 text-white/85 leading-relaxed">
-          {a}
+          <p className="whitespace-pre-line">{a}</p>
         </div>
       )}
     </div>
@@ -152,8 +160,8 @@ export default function Duvidas() {
           </div>
         </div>
 
-        {/* título da seção atual (ou “Resultados da busca”) */}
-        <h2 className="text-xl md:text-2xl font-extrabold mb-4">{view.titulo}</h2>
+        {/* título da seção atual */}
+        <h2 className="text-xl md:text-2xl font-bold mb-4">{view.titulo}</h2>
 
         {/* lista */}
         {view.categorias.length > 0 ? (
@@ -182,10 +190,10 @@ export default function Duvidas() {
           <div className="text-white/70">Nenhum resultado para “{busca}”.</div>
         )}
 
-        {/* CTA final */}
+        
         <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.04] p-5 md:p-6 shadow-[0_0_24px_rgba(255,44,100,0.08)]">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-            <div className="text-lg md:text-xl font-extrabold">✨ Ainda tem dúvidas?</div>
+            <div className="text-lg md:text-xl font-bold">✨ Ainda tem dúvidas?</div>
             <div className="text-white/80 md:flex-1">
               Fale com a gente pelo WhatsApp e descubra como a enmoda+ pode transformar sua carreira na moda.
             </div>
