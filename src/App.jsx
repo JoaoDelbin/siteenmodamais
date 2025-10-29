@@ -34,7 +34,7 @@ function Home() {
           </p>
 
           <div className="mt-6 flex flex-col items-center gap-3 md:flex-row md:justify-center md:gap-4">
-            <a href="assinatura/#planosass" className="font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
+            <a href="assinatura#planosass" className="font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
               QUERO COMEÇAR AGORA
             </a>
 
