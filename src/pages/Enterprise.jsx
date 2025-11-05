@@ -3,7 +3,7 @@ import logoRiachuelo from "../assets/parceiros/riachuelo.png";
 import logoRenner from "../assets/parceiros/renner.png";
 import logoCa from "../assets/parceiros/CA.png";
 import logoMalwee from "../assets/parceiros/malwee.png";
-import logoRestoque from "../assets/parceiros/Restoque.png";
+import logoRestoque from "../assets/parceiros/restoque.png";
 import logoSebrae from "../assets/parceiros/sebrae.png";
 
 import EnterpriseHero from "../components/EnterpriseHero";
