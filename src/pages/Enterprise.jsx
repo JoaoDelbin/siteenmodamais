@@ -1,3 +1,10 @@
+// imports dos logos
+import logoRiachuelo from "../assets/parceiros/riachuelo.png";
+import logoRenner from "../assets/parceiros/renner.png";
+import logoCa from "../assets/parceiros/CA.png";
+import logoMalwee from "../assets/parceiros/malwee.png";
+import logoRestoque from "../assets/parceiros/Restoque.png";
+import logoSebrae from "../assets/parceiros/sebrae.png";
 
 import EnterpriseHero from "../components/EnterpriseHero";
 import { Award, SlidersHorizontal, GraduationCap } from "lucide-react";
@@ -11,10 +18,21 @@ import {
   ShieldCheck,
   LineChart,
 } from "lucide-react";
+import Footer from "../components/rodape.jsx";
 
 const ACCENT = "#FF2C64";
 const CARD_BG = "#110E0F";
 const ICON_BG = "rgba(255,44,100,0.15)"
+
+const PARCEIROS = [
+  { src: logoRiachuelo, alt: "Riachuelo" },
+  { src: logoRenner, alt: "Renner" },
+  { src: logoCa, alt: "C&A" },
+  { src: logoMalwee, alt: "Malwee" },
+  { src: logoRestoque, alt: "Restoque" },
+  { src: logoSebrae, alt: "Sebrae" },
+];
+
 
 export default function EnterprisePage() {
   return (
@@ -221,18 +239,23 @@ export default function EnterprisePage() {
           trainees da Riachuelo. 
         </p>
 
-        {/* grid de logos */}
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 opacity-90">
-          {["Riachuelo", "Empresa", "Empresa","Empresa","Empresa","Empresa","Empresa","Empresa","Empresa","Empresa", ].map((name) => (
-            <div
-              key={name}
-              className="aspect-[3/2] rounded-lg border border-white/10 grid place-items-center text-white/60 text-sm"
-              style={{ background: "rgba(255,255,255,0.03)" }}
-            >
-              {name}
-            </div>
-          ))}
-        </div>
+       {/* grid de logos */}
+<div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 opacity-90">
+  {PARCEIROS.map((p) => (
+    <div
+      key={p.alt}
+      className="aspect-[3/2] rounded-lg border border-white/10 grid place-items-center"
+      style={{ background: "#110E0F" }}
+    >
+      <img
+        src={p.src}
+        alt={p.alt}
+        className="max-w-20 md:max-w-[250px] w-auto object-contain"
+      />
+    </div>
+  ))}
+</div>
+
 
         <div className="mt-8 text-center">
           <a
@@ -276,12 +299,12 @@ export default function EnterprisePage() {
                   <a
   href="https://wa.me/5511945682542?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Enmoda%2B%20para%20empresas!"
   onClick={() => {
-    window.gtag?.('event','whatsapp_click',{ location:'hero', campaign:'enterprise' });
-    window.fbq?.('trackCustom','WhatsappClick',{ location:'hero', campaign:'enterprise' });
+    window.gtag?.('event','whatsapp_click',{ location:'site', campaign:'enterprise' });
+    window.fbq?.('trackCustom','WhatsappClick',{ location:'site', campaign:'enterprise' });
   }}
   className="text-right fixed rounded-full px-6 py-3 font-semibold bg-[#25D366] text-[#073B1A]"
 >
-  Falar no WhatsApp
+  Falar no WhatsApp 
 </a>
       </section>
       

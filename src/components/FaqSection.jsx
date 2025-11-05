@@ -107,14 +107,15 @@ export default function FaqSection({
 
         {showCtas && (
           <div className="mt-8 flex items-center justify-center gap-4">
-            <a
-              href="#planos"
-              className="px-6 py-2 rounded-full bg-[#C2F738] text-[#32410A] text-sm font-semibold hover:bg-[#B4E436]"
+            <p
+              
+              className="inline-flex items-center justify-center rounded-full font-bold transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#FF2C64]/50
+              "
             >
               AINDA FICOU COM DÚVIDAS?
-            </a>
+            </p>
             <a
-              href="https://wa.me/5511965963613"
+              href="https://wa.me/5511965963613?text=Oi!%20Quero%20saber%20mais%20sobre%20a%20enmoda%2B"
               target="_blank"
               rel="noreferrer"
               className="text-sm text-white/70 hover:text-white"

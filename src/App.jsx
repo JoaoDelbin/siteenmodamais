@@ -1,4 +1,8 @@
 import { Routes, Route } from "react-router-dom";
+
+import WhatsAppFloat from "./components/WhatsFlutuante.jsx";
+import Footer from "./components/rodape.jsx";
+
 import ScrollToTop from "./components/ScrollTop.jsx";
 import CourseMarquee from "./components/CourseMarquee";
 import CommunityTransform from "./components/CommunityTransform";
@@ -17,6 +21,7 @@ import Duvidas from "./pages/Duvidas.jsx";
 import Assinatura from "./pages/Assinatura.jsx";
 import Enterprise from "./pages/Enterprise.jsx";
 import { Link } from 'react-router-dom';
+import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 
 function Home() {
   return (
@@ -54,7 +59,7 @@ function Home() {
             <CourseMarquee />
           </div>
 
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4 text-[14px] max-w-[1000px] mx-auto ">
+          <div className="mt-12 mb-6 md:mb-10 flex flex-wrap items-center justify-center gap-4 text-[14px] max-w-[1000px] mx-auto ">
             {[
               "Acesso ilimitado a cursos (Design, Consultoria, VM, etc.)",
               "Aulas ao vivo com profissionais do mercado",
@@ -71,9 +76,9 @@ function Home() {
             ))}
           </div>
 
-          <button className="font-bold px-3 py-1 text-base mt-6 mb-10 md:mt-10 md:mb-6 md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
+          <Link to="assinatura#planosass" className="font-bold px-3 py-1 text-base mt-6 mb-10 md:mt-10 md:mb-6 md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
             QUERO COMEÇAR AGORA
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -98,6 +103,7 @@ function Home() {
       <section>
         <PhoneVerifyBar />
       </section>
+    
     </main>
   );
 }
@@ -105,20 +111,34 @@ function Home() {
 /* ===== Header e Rotas ===== */
 export default function App() {
   return (
-    <div className="bg-[#0D0A0B] min-h-screen">
+    <div className="bg-[#0D0A0B] min-h-screen flex flex-col">
       <Header />
       <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/conteudo" element={<ConteudoPage />} />
-        <Route path="/conteudo/:id" element={<CourseDetail />} />
-        <Route path="/assinatura" element={<Assinatura />} />
-         <Route path="/assinantes" element={<Assinantes />} />
-         <Route path="/enterprise" element={<Enterprise />} />
-         <Route path="/sobre" element={<Sobre />} />
-         <Route path="/duvidas" element={<Duvidas />} />
-        <Route path="*" element={<Home />} /> 
-      </Routes>
+
+      {/* conteúdo das páginas */}
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/conteudo" element={<ConteudoPage />} />
+          <Route path="/conteudo/:id" element={<CourseDetail />} />
+          <Route path="/assinatura" element={<Assinatura />} />
+          <Route path="/assinantes" element={<Assinantes />} />
+          <Route path="/enterprise" element={<Enterprise />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/duvidas" element={<Duvidas />} />
+          <Route
+            path="/politica-de-privacidade"
+            element={<PoliticaPrivacidade />}
+          />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </main>
+
+      
+      <Footer />
+
+     
+      <WhatsAppFloat />
     </div>
   );
 }

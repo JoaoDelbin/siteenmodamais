@@ -2,19 +2,19 @@
 import { useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 
-// Marca/tema
+
 const BRAND = { accent: "#FF2C64", pillBg: "rgba(255,44,100,0.12)", cardBg: "#110E0F" };
 
 // Links/configs
-const PERSONAL_URL = "/assinatura"; // URL da página de assinatura
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzzUCbkB6DXYxbq8Zms6n_-BKb6ppeAy3HLUZ-4zjHhiNH_2W6bnt3Asm_L_5SER2l6/exec";             //  Web App URL do Apps Script
+const PERSONAL_URL = "/assinatura"; 
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyjQA19wIiFYb7YNS6HeajNK-juOV0BxhCBntF5_NROvJWo5aXPfPdc3MHJVW9pCQ8/exec";             //  Web App URL do Apps Script
 
-// utils
+
 function cx(...classes) { return classes.filter(Boolean).join(" "); }
 const validateEmail = (v) => /\S+@\S+\.[\w-]{2,}/.test((v || "").trim());
 const onlyDigits = (v) => (v || "").replace(/\D/g, "");
 
-// telefone: formata e valida BR (+55 + DDD + 8/9)
+
 const formatPhoneBR = (raw) => {
   const d = onlyDigits(raw);
   if (!d) return "";
@@ -63,7 +63,7 @@ export default function EnterpriseHero() {
     if (submitting) return;
     setSubmitting(true);
     try {
-      const payload = { ...s1, ...s2, ...s3, fonte: "enmoda-empresas-hero" };
+      const payload = { ...s1, ...s2, ...s3, fonte: "enmoda-empresas-hero", tipo: "lead-enterprise", };
 
       if (WEBHOOK_URL) {
         await fetch(WEBHOOK_URL, {

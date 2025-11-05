@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import COURSES from "../assets/courses";
 import { capaDoCurso, fotoProfessorPorId } from "../assets/imagens";
+import Footer from "../components/rodape.jsx";
 
 export default function CourseDetail() {
   const { id } = useParams();
@@ -86,9 +87,9 @@ export default function CourseDetail() {
               <span className="text-xs text-white/60">
                 A assinatura enmoda+ libera acesso a todos os cursos.
               </span>
-              <button className="font-bold px-3 py-1 text-base mt-6 mb-10 md:mt-10 md:mb-6 md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
+              <Link to="/assinatura#planosass" className="font-bold px-3 py-1 text-base mt-6 mb-10 md:mt-10 md:mb-6 md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
                 QUERO COMEÇAR AGORA
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -128,6 +129,7 @@ export default function CourseDetail() {
           </section>
         )}
       </div>
+      
     </main>
   );
 }

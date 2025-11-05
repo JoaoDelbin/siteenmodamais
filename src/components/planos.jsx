@@ -26,7 +26,7 @@ export default function PlansSection() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <article className="rounded-xl bg-[#181516] border border-white/10 p-6 md:p-8 flex flex-col">
+          <article className="rounded-xl bg-[#110E0F] border border-white/10 p-6 md:p-8 flex flex-col">
             <header className="text-center mb-6">
               <h3 className="text-xl font-bold tracking-wide">PLANO MENSAL</h3>
               <div className="mt-2 text-sm text-white/60 line-through"></div>
@@ -48,7 +48,7 @@ export default function PlansSection() {
             </a>
           </article>
 
-          <article className="relative rounded-xl bg-[#181516] border border-[#FF2C64] p-6 md:p-8 flex flex-col transition duration-300 ease-in-out hover:shadow-[0_4px_20px_2px_#FF2C64]">
+          <article className="relative rounded-xl bg-[#110E0F] border border-[#FF2C64] p-6 md:p-8 flex flex-col transition duration-300 ease-in-out hover:shadow-[0_4px_20px_2px_#FF2C64]">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF2C64] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
               <BadgePercent className="w-5 h-5" /> MAIS VANTAJOSO
             </span>
@@ -71,15 +71,17 @@ export default function PlansSection() {
               ))}
             </ul>
 
-            <a href="" className="text-center transition duration-300 ease-in-out hover:shadow-[0_0_8px_1px_#C2F738] mt-6 w-full py-3 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]">
+            
+            <p className="text-center text-xs text-white/60 mt-6">
+          Renovação automática. Cancelamento com reembolso integral em até 7 dias após a contratação.
+        </p>
+        <a href="" className="text-center transition duration-300 ease-in-out hover:shadow-[0_0_8px_1px_#C2F738] mt-6 w-full py-3 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]">
               ASSINAR ANUAL
             </a>
           </article>
         </div>
 
-        <p className="text-center text-xs text-white/50 mt-6">
-          Renovação automática. Cancelamento com reembolso integral em até 7 dias após a contratação.
-        </p>
+        
       </div>
     </section>
   );

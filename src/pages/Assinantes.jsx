@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import CTAButton from "../components/CTA";
+import SubscribersTestimonialSection from "../components/CapDepoimentos";
+import Footer from "../components/rodape.jsx";
 
 function useLockBody(open) {
   useEffect(() => {
@@ -56,30 +59,6 @@ const TESTIMONIALS = [
     avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
     video: "https://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1",
   },
-  {
-    id: "sofia",
-    quote: "Entrei pelo certificado, fiquei pela comunidade e pelos professores.",
-    name: "Sofia Ribeiro",
-    role: "Assinante enmoda+",
-    avatar: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
-    video: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-},
-  {
-    id: "gabriel",
-    quote: "Consegui minha primeira vaga em moda aplicando o que aprendi aqui.",
-    name: "Gabriel Nunes",
-    role: "Assinante enmoda+",
-    avatar: "https://images.unsplash.com/photo-1546525848-3ce03ca516f6?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
-    video: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-},
-  {
-    id: "paula",
-    quote: "As mentorias me deram direção para abrir meu próprio negócio.",
-    name: "Paula Fernandes",
-    role: "Assinante enmoda+",
-    avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
-    video: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
-},
 ];
 
 function Card({ t, onVideo }) {
@@ -121,26 +100,27 @@ export default function Assinantes() {
             abriram seus próprios negócios e encontraram clareza de carreira ao estudar com os maiores experts da moda.
           </p>
           <p className="mt-3 text-white/80">Veja como a enmoda+ tem feito a diferença na vida de quem decidiu investir em si mesmo.</p>
-          <p className="mt-1 text-white/70 italic">E o próximo depoimento pode ser o seu.</p>
-          <a href="assinatura#planosass" className="inline-block mt-6 px-6 py-2 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]">
-            Quero fazer parte da Enmoda+
-          </a>
+          <p className="mt-1 mb-10 text-white/70 italic">E o próximo depoimento pode ser o seu.</p>
+          <CTAButton variant="primary" to="/assinatura#planosass" size="md" className='mb-2 md:mb-0'>
+  QUERO COMEÇAR AGORA
+</CTAButton>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
+        <div className="mt-14 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
           {TESTIMONIALS.map((t) => (
             <Card key={t.id} t={t} onVideo={(src) => setVideoSrc(src)} />
           ))}
         </div>
+</div>
 
-        <div className="mt-10 text-center">
-          <a href="/#planos" className="inline-block px-6 py-2 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]">
-            Quero fazer parte da Enmoda+
-          </a>
-        </div>
-      </div>
+<SubscribersTestimonialSection />
+
+      
 
       <VideoModal open={!!videoSrc} onClose={() => setVideoSrc(null)} src={videoSrc} />
+          <section>
+                        <Footer />
+                      </section>
     </main>
   );
 }

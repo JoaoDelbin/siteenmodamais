@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import laptop from "../assets/laptop.png";
+import { Link } from "react-router-dom";
 
 const formatPt = (n) =>
   new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 0 }).format(n);
@@ -122,13 +123,13 @@ export default function ConhecaEnmoda({ imageSrc = laptop }) {
                 ))}
               </div>
 
-              <div className="mt-6 md:mt-8 text-center -mb-10">
-                <button className="font-bold px-3 py-1 text-base
+              <div className="hidden mt-6 md:mt-8 text-center -mb-10">
+                <Link to="assinatura#planosass" className="font-bold px-3 py-1 text-base
                md:px-4 md:py-1.5 md:text-lg
                rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out
                        hover:shadow-[0_0_10px_2px_#C2F738]">
                   QUERO COMEÇAR AGORA
-                </button>
+                </Link>
               </div>
             </div>
           </div>

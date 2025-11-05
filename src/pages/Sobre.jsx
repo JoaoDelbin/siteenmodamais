@@ -9,6 +9,7 @@ import {
   Building2,
 } from "lucide-react";
 import CTAButton from "../components/CTA"
+import Footer from "../components/rodape.jsx";
 
 export default function Sobre() { 
   return (
@@ -41,7 +42,7 @@ export default function Sobre() {
               <div className="mt-7 flex-row text-center">
                 
 
-<CTAButton variant="primary" size="md" className='mb-3 md:mb-0 mr-4'>
+<CTAButton variant="primary" to="/assinatura#planosass" size="md" className='mb-3 md:mb-0 mr-4'>
   QUERO COMEÇAR AGORA
 </CTAButton>
 
@@ -128,7 +129,7 @@ export default function Sobre() {
 <div className="mt-2 mb-4 text-center md:hidden">
                 
 
-      <CTAButton variant="primary" size="md" className='mb-2 md:mb-0'>
+      <CTAButton variant="primary" to="/assinatura#planosass" size="md" className='mb-2 md:mb-0'>
         QUERO COMEÇAR AGORA
       </CTAButton>
               </div>
@@ -169,7 +170,7 @@ export default function Sobre() {
 <div className="mt-2 mb-4 text-center md:hidden">
                 
 
-<CTAButton variant="primary" size="md" className='mb-2 md:mb-0'>
+<CTAButton variant="primary" to="/assinatura#planosass" size="md" className='mb-2 md:mb-0'>
   QUERO COMEÇAR AGORA
 </CTAButton>
               </div>
@@ -222,17 +223,16 @@ export default function Sobre() {
               Aproximar você do mercado com aprendizado prático, acessível e de qualidade.
             </p>
             <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-4">
-              <Link
-                to="/#planos"
-                className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#C2F738] text-[#32410A] font-semibold hover:bg-[#B4E436]"
-              >
-                Quero fazer parte <ArrowRight className="w-4 h-4" />
-              </Link>
+              <CTAButton variant="primary" to="/assinatura#planosass" size="md" className='mb-2 md:mb-0'>
+  QUERO COMEÇAR AGORA <ArrowRight className="w-4 h-4" />
+</CTAButton> 
+              
               <span className="text-white/70">🚀 O futuro da moda passa por aqui.</span>
             </div>
           </div>
         </div>
       </section>
+    
     </main>
   );
 }

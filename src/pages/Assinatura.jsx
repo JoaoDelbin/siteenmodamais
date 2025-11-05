@@ -18,6 +18,7 @@ import PlansSection from "../components/planos";
 import FaqSection, { FAQ_ALL } from "../components/FaqSection";
 import { DiferenciaisSection } from "../components/DIFassinatura";
 import CTAButton from "../components/CTA";
+import Footer from "../components/rodape.jsx";
 
 
 export default function Assinatura() {
@@ -76,7 +77,7 @@ export default function Assinatura() {
       
       <section className="mt-6 mb-6">
       <DiferenciaisSection />
-      <div className="text-center"><CTAButton href="/assinatura/#planosass" variant="primary" size="md" className='mb-2 md:mb-0'>
+      <div className="text-center"><CTAButton to="/assinatura/#planosass" variant="primary" size="md" className='mb-2 md:mb-0'>
   QUERO COMEÇAR AGORA
 </CTAButton></div>
         </section>
@@ -163,6 +164,7 @@ export default function Assinatura() {
          <FaqSection items={[FAQ_ALL[3], FAQ_ALL[4], FAQ_ALL[5]]} />
         </div>
       </section>
+      
     </main>
   );
 }

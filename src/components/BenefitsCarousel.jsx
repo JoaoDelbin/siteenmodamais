@@ -2,8 +2,23 @@ import { useEffect, useRef, useState } from "react";
 import {
   CheckCircle, BookOpen, Heart, FileText, Headphones, Award, Clock,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const BENEFITS = [
+  { icon: <CheckCircle className="w-6 h-6 text-[#FF2C64]" />, title: "Estude com os melhores", text: "Aprenda com experts que moldam a indústria da moda." },
+  { icon: <BookOpen className="w-6 h-6 text-[#FF2C64]" />, title: "Explore temas diferentes", text: "Consultoria de imagem, design, marketing, comunicação, varejo e muito mais." },
+  { icon: <Heart className="w-6 h-6 text-[#FF2C64]" />, title: "Descubra novas paixões", text: "Encontre novos interesses e talentos." },
+  { icon: <FileText className="w-6 h-6 text-[#FF2C64]" />, title: "Materiais complementares", text: "Conteúdo detalhado para aprofundar." },
+  { icon: <Headphones className="w-6 h-6 text-[#FF2C64]" />, title: "Ouça enquanto pratica", text: "Transforme qualquer momento em estudo." },
+  { icon: <Award className="w-6 h-6 text-[#FF2C64]" />, title: "Certificados de cursos", text: "Reconhecidos e valorizam seu currículo." },
+  { icon: <Clock className="w-6 h-6 text-[#FF2C64]" />, title: "Horas complementares", text: "Essenciais para sua formação." },
+  { icon: <CheckCircle className="w-6 h-6 text-[#FF2C64]" />, title: "Estude com os melhores", text: "Aprenda com experts que moldam a indústria da moda." },
+  { icon: <BookOpen className="w-6 h-6 text-[#FF2C64]" />, title: "Explore temas diferentes", text: "Consultoria de imagem, design, marketing, comunicação, varejo e muito mais." },
+  { icon: <Heart className="w-6 h-6 text-[#FF2C64]" />, title: "Descubra novas paixões", text: "Encontre novos interesses e talentos." },
+  { icon: <FileText className="w-6 h-6 text-[#FF2C64]" />, title: "Materiais complementares", text: "Conteúdo detalhado para aprofundar." },
+  { icon: <Headphones className="w-6 h-6 text-[#FF2C64]" />, title: "Ouça enquanto pratica", text: "Transforme qualquer momento em estudo." },
+  { icon: <Award className="w-6 h-6 text-[#FF2C64]" />, title: "Certificados de cursos", text: "Reconhecidos e valorizam seu currículo." },
+  { icon: <Clock className="w-6 h-6 text-[#FF2C64]" />, title: "Horas complementares", text: "Essenciais para sua formação." },
   { icon: <CheckCircle className="w-6 h-6 text-[#FF2C64]" />, title: "Estude com os melhores", text: "Aprenda com experts que moldam a indústria da moda." },
   { icon: <BookOpen className="w-6 h-6 text-[#FF2C64]" />, title: "Explore temas diferentes", text: "Consultoria de imagem, design, marketing, comunicação, varejo e muito mais." },
   { icon: <Heart className="w-6 h-6 text-[#FF2C64]" />, title: "Descubra novas paixões", text: "Encontre novos interesses e talentos." },
@@ -18,7 +33,7 @@ function Card({ icon, title, text }) {
     <div className="shrink-0 w-[240px] h-[220px] md:w-[300px] md:h-[170px]"> 
       <div
         className="
-          h-full rounded-xl bg-[#181516] border border-white/10 p-6
+          h-full rounded-xl bg-[#110E0F] border border-white/10 p-6
           transition hover:shadow-l-[#FF2C64]
           cursor-default select-none flex flex-col text-center
         "
@@ -131,13 +146,13 @@ export default function BenefitsCarousel({ speedPxPerFrame = 1.1 }) {
 
         <div className="mt-2 flex flex-col items-center gap-3
                 md:flex-row md:justify-center md:gap-4">
-           <button
+           <Link to="assinatura#planosass"
     className="font-bold px-3 py-1 text-base
                md:px-4 md:py-1.5 md:text-lg
                rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out
                        hover:shadow-[0_0_10px_2px_#C2F738]">
     QUERO COMEÇAR AGORA
-  </button>
+  </Link>
 
   <div className="flex items-center gap-1">
     <div className="flex -space-x-2.5">

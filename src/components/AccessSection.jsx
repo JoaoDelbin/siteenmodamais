@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Check() {
   return (
@@ -40,7 +41,7 @@ const fadeUpSoft = {
           tudo dentro do ecossistema <span className="font-bold">enmoda+</span>
         </p>
 
-        <div className="mt-8">
+        <div className="mt-8 mb-8">
           <motion.div
             variants={container}
             initial="initial"
@@ -94,13 +95,13 @@ const fadeUpSoft = {
           </motion.div>
         </div>
 
-        <button
+        <Link to="/assinatura#planosass"
           className="mt-7 font-bold px-3 py-1 text-base
                      md:px-4 md:py-1.5 md:text-lg
                      rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]"
         >
           QUERO COMEÇAR AGORA
-        </button>
+        </Link>
       </div>
     </section>
   );

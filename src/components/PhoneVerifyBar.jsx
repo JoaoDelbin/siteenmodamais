@@ -130,6 +130,7 @@ return (
         {status === "bad" && (
           <span className="inline-flex items-center gap-2 text-[13px] text-[#FF2C64]">
             • Número não encontrado na nossa lista oficial
+             <br />LISTA OFICIAL 11 96596-3613, 11 97644-7837, 11 97644-7837, 11 99441-9063, 11 99190-2755
           </span>
         )}
       </div>

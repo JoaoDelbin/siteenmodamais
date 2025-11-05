@@ -1,5 +1,6 @@
 
 import { useEffect, useMemo, useState } from "react";
+import Footer from "../components/rodape.jsx";
 
 /* ====== dados ====== */
 const CATEGORIAS = [
@@ -216,6 +217,7 @@ export default function Duvidas() {
         .no-scrollbar::-webkit-scrollbar{display:none}
         .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
       `}</style>
+      
     </main>
   );
 }

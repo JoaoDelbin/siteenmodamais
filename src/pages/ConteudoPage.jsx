@@ -4,6 +4,7 @@ import Carreira from "../components/Carreira";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import CURSOS from "../assets/courses";
+import Footer from "../components/rodape.jsx";
 
 /* ===================== CAPAS (auto-mapeamento) ===================== */
 const imagensCursos = import.meta.glob("../assets/cursos/*.{png,jpg,jpeg,webp}", {
@@ -400,6 +401,7 @@ export default function ConteudoPage() {
         .no-scrollbar::-webkit-scrollbar{display:none}
         .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
       `}</style>
+      
     </main>
   );
 }
