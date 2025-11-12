@@ -89,7 +89,7 @@ function TypewriterBar({
           maxWidth: 460,
         }}
       >
-        <div className="inline-flex items-baseline gap-1 text-sm md:text-lg font-semibold text-white leading-tight">
+        <div className="inline-flex items-baseline gap-1 text-xs md:text-lg font-semibold text-white leading-tight">
           <span className="whitespace-nowrap">{text || "\u00A0"}</span>
           <span className="block w-[2px] h-[1.15em] bg-white/90 animate-[caret_900ms_steps(1,end)_infinite]" />
         </div>
@@ -150,27 +150,40 @@ function VideoModal({ open, onClose, src }) {
 const TESTIMONIALS = [
   {
     quote: "Conteúdo direto do mercado. As mentorias me deram clareza de carreira.",
-    name: "Ana Costa",
+    name: "Ana Beatriz",
     role: "Assinante enmoda+",
     avatarUrl:
       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
-    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1",
+    videoUrl: "https://www.youtube.com/embed/EO-fKonlCzQ?autoplay=1",
   },
   {
-    quote: "A comunidade acelera muito o networking. Recomendo demais!",
-    name: "Bruno Martins",
+    quote: "Diversos cursos de qualidade que ensinam muito bem as carreiras de moda",
+    name: "Gabriela Felix",
     role: "Assinante enmoda+",
     avatarUrl:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+    videoUrl: "https://www.youtube.com/embed/jZ8VU2qUZFs?start=464&autoplay=1",
   },
   {
-    quote: "As trilhas e materiais complementares mudaram meu dia a dia no trabalho.",
-    name: "Luiza Almeida",
+    quote: "A coordenadora do curso me indicou a Enmoda+ e foi a melhor decisão. Os cursos são completíssimos, superaram minhas expectativas e estão me preparando muito melhor para chegar na faculdade.",
+    name: "Rafaela Hennemann",
     role: "Assinante enmoda+",
     avatarUrl:
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
-    videoUrl: "https://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1",
+  },
+  {
+    quote: "Aplicativo funciona super bem. As aulas bem explicativas e ótimos conteúdos riquíssimos de moda. Melhor investimento que fiz!",
+    name: "Vasconcellos",
+    role: "Assinante enmoda+",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
+  },
+  {
+    quote: "Sonho em ter uma loja de roupas, vi o conteúdo com algumas figuras que acompanho no instagram e achei muito interessante, o atendimento na compra também foi muito bom.",
+    name: "Anônimo",
+    role: "Assinante enmoda+",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
   },
 ];
 
@@ -291,7 +304,7 @@ export default function CommunityTransform() {
               className="h-20 w-20 lg:h-24 lg:w-24 rounded-full overflow-hidden ring-2 ring-[#FF2D55] shadow-md hover:scale-105 transition"
               aria-label="Assistir ao vídeo"
             >
-              <img src={t.avatarUrl} alt={`Foto de ${t.name}`} className="w-full h-full object-cover" />
+              <img src={t.avatarUrl} alt={`Foto de ${t.name}`} className=" w-full h-full object-cover" />
             </button>
             <button onClick={() => setVideoOpen(true)} className="text-xs lg:text-sm underline text-[#FF2D55] hover:text-white">
               assista ao vídeo

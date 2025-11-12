@@ -95,7 +95,7 @@ const fadeUpSoft = {
           </motion.div>
         </div>
 
-        <Link to="/assinatura#planosass"
+        <Link to="/#planoshome1"
           className="mt-7 font-bold px-3 py-1 text-base
                      md:px-4 md:py-1.5 md:text-lg
                      rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]"

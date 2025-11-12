@@ -7,7 +7,7 @@ function cx(...args) {
 }
 
 const base =
-  "inline-flex items-center justify-center rounded-full font-bold transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#FF2C64]/50";
+  "inline-flex items-center justify-center rounded-full font-bold transition duration-300 ease-in-out ";
 
 const sizes = {
   md: "px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg",

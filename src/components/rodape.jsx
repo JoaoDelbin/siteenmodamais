@@ -119,6 +119,17 @@ export default function Footer() {
                     LGPD e dados pessoais
                   </a>
                 </li>
+                <li>
+                  <Link
+                    to="/cancelamento"
+                    className="hover:text-white"
+                  >
+                    Cancelamento
+                  </Link>
+                </li>
+                <li>
+                <a href="#" id="open_preferences_center">Atualizar preferências de cookies</a>
+                </li>
               </ul>
             </div>
           </div>

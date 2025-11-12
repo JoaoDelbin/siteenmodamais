@@ -1,6 +1,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Footer from "../components/rodape.jsx";
+import { Link } from 'react-router-dom';
 
 /* ====== dados ====== */
 const CATEGORIAS = [
@@ -42,13 +43,34 @@ const CATEGORIAS = [
         a: "Plano Mensal: não possui fidelidade. A renovação é automática, mas você pode cancelar quando quiser. Plano Anual: garante o melhor custo-benefício, com acesso contínuo por 12 meses. Em ambos os planos, você pode solicitar cancelamento com reembolso integral em até 7 dias após a contratação (direito de arrependimento)."
       },
       {
-        q: "Como faço para cancelar minha assinatura?",
-        a: `Para cancelar sua assinatura, basta acessar o link: /cancelamento 
+  q: "Como faço para cancelar minha assinatura?",
+  a: (
+    <>
+      <p>
+        Para cancelar sua assinatura, basta acessar a{" "}
+        <Link
+          to="/cancelamento"
+          className="underline text-[#FF2C64] font-semibold"
+        >
+          página de cancelamento
+        </Link>.
+      </p>
 
-Preencha o formulário com seus dados e nossa equipe realizará o cancelamento em até 48 horas úteis. 
+      <p className="mt-2">
+        Preencha o formulário com seus dados e nossa equipe realizará o
+        cancelamento em até 48 horas úteis.
+      </p>
 
-IMPORTANTE: Se você assinou o plano anual, o cancelamento só é permitido dentro do prazo legal de 7 dias após a contratação. Após esse período, o plano segue ativo até o fim do ciclo contratado, assim como em outras plataformas de streaming no Brasil.`
-      }
+      <p className="mt-2">
+        <strong>IMPORTANTE:</strong> Se você assinou o plano anual, o
+        cancelamento só é permitido dentro do prazo legal de 7 dias após a
+        contratação. Após esse período, o plano segue ativo até o fim do ciclo
+        contratado, assim como em outras plataformas de streaming no Brasil.
+      </p>
+    </>
+  ),
+}
+
     ]
   },
   {
@@ -83,7 +105,11 @@ function AcordeaoItem({ q, a, aberto, onToggle }) {
       </button>
       {aberto && (
         <div className="px-4 md:px-5 pb-4 -mt-1 text-white/85 leading-relaxed">
-          <p className="whitespace-pre-line">{a}</p>
+          {typeof a === "string" ? (
+            <p className="whitespace-pre-line">{a}</p>
+          ) : (
+            a
+          )}
         </div>
       )}
     </div>

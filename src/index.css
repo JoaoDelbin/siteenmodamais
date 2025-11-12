@@ -10,3 +10,45 @@
   html { @apply font-sans; }
   html { scroll-behavior: smooth; }
 }
+
+/* === Cookie bar full-width no rodapé === */
+#cc--main .cc-nb{
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 16px 0 !important;
+  z-index: 99999 !important;
+  box-shadow: 0 -10px 40px rgba(0,0,0,.35);
+}
+
+/* Centraliza e limita o conteúdo internamente,
+   independente do nome do wrapper interno */
+#cc--main .cc-nb > div{
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap; /* quebra em telas menores */
+}
+
+/* (opcional) estiliza o botão OK no seu padrão */
+#cc--main .cc-nb-okagree{
+  background: #C2F738 !important;
+  color: #32410A !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 0 10px 2px rgba(194,247,56,.2);
+}
+
+/* (opcional) link de preferências */
+#cc--main .cc-nb-changep{
+  color: #fff !important;
+  text-decoration: underline;
+}

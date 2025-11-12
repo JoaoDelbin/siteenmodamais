@@ -1,36 +1,55 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enmoda Mais - Plataforma de Cursos de Moda</title>
-     <!-- =========================================
-       GOOGLE ANALYTICS 4 (GA4)
-       
-  ========================================== -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=__GA_MEASUREMENT_ID__"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("js", new Date());
-    gtag("config", "__GA_MEASUREMENT_ID__");
-  </script>
-   <!-- =========================================
-       MICROSOFT CLARITY
-       
-       
-  ========================================== -->
-  <script>
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
-  </script>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-55PW26MB');</script>
+<!-- End Google Tag Manager -->
+
+ <!-- CSS / JS do widget de checkout da Hotmart -->
+<link rel="preconnect" href="https://static.hotmart.com">
+<link rel="stylesheet" href="https://static.hotmart.com/css/hotmart-fb.min.css">
+<script
+  src="https://static.hotmart.com/checkout/widget.min.js"
+  defer
+  onload="window._HM_WIDGET_READY = true;window.dispatchEvent(new Event('hotmart-widget-ready'));"
+></script>
+ <!-- CSS / JS do widget de checkout da Hotmart -->
+  
+<!-- Cookie Consent by TermsFeed -->
+<script src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js" charset="UTF-8"></script>
+<script charset="UTF-8">
+  document.addEventListener('DOMContentLoaded', function () {
+    cookieconsent.run({
+      notice_banner_type: "footer",
+      notice_banner_position: "bottom",
+      consent_type: "implied",
+      palette: "dark",
+      language: "pt",
+      website_name: "enmodamais",
+      website_privacy_policy_url: "https://enmodamais.com.br/#/politica-de-privacidade"
+    });
+  });
+</script>
+
+<!-- End Cookie Consent -->
+
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55PW26MB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   </body>
 </html>

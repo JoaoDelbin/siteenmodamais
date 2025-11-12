@@ -1,8 +1,11 @@
 import { Routes, Route } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
+import HotmartPonte from "./components/hotmartponte.jsx";
+
 
 import WhatsAppFloat from "./components/WhatsFlutuante.jsx";
 import Footer from "./components/rodape.jsx";
-
 import ScrollToTop from "./components/ScrollTop.jsx";
 import CourseMarquee from "./components/CourseMarquee";
 import CommunityTransform from "./components/CommunityTransform";
@@ -13,6 +16,7 @@ import BenefitsCarousel from "./components/BenefitsCarousel";
 import FaqSection, { FAQ_ALL } from "./components/FaqSection.jsx";
 import PlansSection from "./components/planos";
 import Header from "./components/nav";
+
 import ConteudoPage from "./pages/ConteudoPage.jsx";
 import CourseDetail from "./pages/CourseDetail.jsx";
 import Assinantes from "./pages/Assinantes.jsx";
@@ -20,8 +24,15 @@ import Sobre from "./pages/Sobre.jsx";
 import Duvidas from "./pages/Duvidas.jsx";
 import Assinatura from "./pages/Assinatura.jsx";
 import Enterprise from "./pages/Enterprise.jsx";
-import { Link } from 'react-router-dom';
+
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
+import Cancelamento from "./pages/Cancelamento";
+
+import a1 from "./assets/assinantes/assinante1.jpg";
+import a2 from "./assets/assinantes/assinante2.jpg";
+import a3 from "./assets/assinantes/assinante3.jpg";
+
+const AVATARS = [a1, a2, a3];
 
 function Home() {
   return (
@@ -39,20 +50,25 @@ function Home() {
           </p>
 
           <div className="mt-6 flex flex-col items-center gap-3 md:flex-row md:justify-center md:gap-4">
-            <Link to="assinatura#planosass" className="font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
+            <Link to="#planoshome" className="font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
               QUERO COMEÇAR AGORA
             </Link>
 
             <div className="flex items-center gap-1">
-              <div className="flex -space-x-2.5">
-                <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-[#0B0B15]" />
-                <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-[#0B0B15]" />
-                <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-[#0B0B15]" />
-              </div>
-              <span className="text-xs md:text-base font-semibold text-gray-300">
-                +1.000 assinantes
-              </span>
-            </div>
+  <div className="flex -space-x-2.5">
+    {AVATARS.slice(0, 3).map((src, i) => (
+      <img
+        key={i}
+        src={src}
+        alt={`Assinante ${i + 1}`}
+        className="w-9 h-9 rounded-full object-cover border-2 border-[#0B0B15]"
+      />
+    ))}
+  </div>
+  <span className="text-xs md:text-base font-semibold text-gray-300">
+    +1.000 assinantes
+  </span>
+</div>
           </div>
 
           <div className="mt-4 md:mt-10">
@@ -76,7 +92,7 @@ function Home() {
             ))}
           </div>
 
-          <Link to="assinatura#planosass" className="font-bold px-3 py-1 text-base mt-6 mb-10 md:mt-10 md:mb-6 md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
+          <Link to="#planoshome" className="font-bold px-3 py-1 text-base mt-6 mb-10 md:mt-10 md:mb-6 md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]">
             QUERO COMEÇAR AGORA
           </Link>
         </div>
@@ -91,8 +107,12 @@ function Home() {
       <section>
         <BenefitsCarousel />
       </section>
-      <section>
+      <section id="planoshome">
+        <div id="planoshome1">
+          <div id="planoshome2">
         <PlansSection />
+         </div>
+        </div>
       </section>
       <section>
         <ConhecaEnmoda />
@@ -126,6 +146,7 @@ export default function App() {
           <Route path="/enterprise" element={<Enterprise />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/duvidas" element={<Duvidas />} />
+          <Route path="cancelamento" element={<Cancelamento />} />
           <Route
             path="/politica-de-privacidade"
             element={<PoliticaPrivacidade />}

@@ -11,6 +11,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+
 import COURSES from "../assets/courses";
 import { capaDoCurso } from "../assets/imagens";
 
@@ -24,7 +25,7 @@ import Footer from "../components/rodape.jsx";
 export default function Assinatura() {
 
   const masterclasses = useMemo(() => COURSES.slice(0, 5), []);
-
+  
   return (
     <main className="min-h-screen w-full bg-[#0D0A0B] text-white">
       
@@ -43,7 +44,7 @@ export default function Assinatura() {
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Link
-                  to="#planosass"
+                  to="/assinatura#planosass"
                   className="font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]"
                 >
                   QUERO COMEÇAR AGORA
@@ -77,7 +78,7 @@ export default function Assinatura() {
       
       <section className="mt-6 mb-6">
       <DiferenciaisSection />
-      <div className="text-center"><CTAButton to="/assinatura/#planosass" variant="primary" size="md" className='mb-2 md:mb-0'>
+      <div className="text-center"><CTAButton to="/assinatura#planosass" variant="primary" size="md" className='mb-2 md:mb-0'>
   QUERO COMEÇAR AGORA
 </CTAButton></div>
         </section>

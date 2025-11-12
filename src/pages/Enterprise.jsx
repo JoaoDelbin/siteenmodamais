@@ -5,6 +5,7 @@ import logoCa from "../assets/parceiros/CA.png";
 import logoMalwee from "../assets/parceiros/malwee.png";
 import logoRestoque from "../assets/parceiros/restoque.png";
 import logoSebrae from "../assets/parceiros/sebrae.png";
+import { Link } from 'react-router-dom';
 
 import EnterpriseHero from "../components/EnterpriseHero";
 import { Award, SlidersHorizontal, GraduationCap } from "lucide-react";
@@ -94,13 +95,20 @@ export default function EnterprisePage() {
           ))}
           
         </div>
-           <div className="block md:hidden mt-6"> <a 
-          href="#form-empresas"
+           <div className="block md:hidden mt-6"> <Link 
+          to="/enterprise/#form-empresas"
+           onClick={(e) => {
+      e.preventDefault(); 
+      const el = document.getElementById("form-empresas");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }}
           className="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-white shadow-[0_8px_30px_rgba(255,44,100,0.35)] hover:opacity-90"
           style={{ backgroundColor: ACCENT }}
         >
           Solicitar proposta personalizada
-        </a>
+        </Link>
         </div>
       </section>
 
@@ -158,13 +166,20 @@ export default function EnterprisePage() {
   </div>
 
   <div className="mt-8 text-center">
-    <a
-      href="#form-empresas"
+    <Link
+      to="/enterprise/#form-empresas"
+       onClick={(e) => {
+      e.preventDefault(); 
+      const el = document.getElementById("form-empresas");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }}
       className="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-white shadow-[0_8px_30px_rgba(255,44,100,0.35)] hover:opacity-90"
       style={{ backgroundColor: ACCENT }}
     >
       Solicitar proposta personalizada
-    </a>
+    </Link>
   </div>
 </section>
 <section id="beneficios" className="max-w-7xl mx-auto px-6 pt-6 pb-12 scroll-mt-24">
@@ -219,13 +234,20 @@ export default function EnterprisePage() {
   </div>
 
   <div className="mt-8 text-center">
-    <a
-      href="#form-empresas"
+    <Link
+      to="/enterprise/#form-empresas"
+       onClick={(e) => {
+      e.preventDefault(); 
+      const el = document.getElementById("form-empresas");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }}
       className="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-white shadow-[0_8px_30px_rgba(255,44,100,0.35)] hover:opacity-90"
       style={{ backgroundColor: ACCENT }}
     >
       Solicitar proposta personalizada
-    </a>
+    </Link>
   </div>
 </section>
 
@@ -258,13 +280,20 @@ export default function EnterprisePage() {
 
 
         <div className="mt-8 text-center">
-          <a
-            href="#form-empresas"
+          <Link
+            to="/enterprise/#form-empresas"
+             onClick={(e) => {
+      e.preventDefault(); 
+      const el = document.getElementById("form-empresas");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }}
             className="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-white shadow-[0_8px_30px_rgba(255,44,100,0.35)] hover:opacity-90"
             style={{ backgroundColor: ACCENT }}
           >
             Quero treinar meu time
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -280,27 +309,34 @@ export default function EnterprisePage() {
           </p>
 
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="#form-empresas"
+            <Link
+              to="/enterprise/#form-empresas"
+               onClick={(e) => {
+      e.preventDefault(); 
+      const el = document.getElementById("form-empresas");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }}
               className="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-white shadow-[0_8px_30px_rgba(255,44,100,0.35)] hover:opacity-90"
               style={{ backgroundColor: ACCENT }}
             >
               Solicitar orçamento
-            </a>
-            <a
-              href="/assinatura/#planosass"
+            </Link>
+            <Link
+              to="/assinatura/#planosass"
               className="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold text-[#32410A] bg-[#C2F738] hover:shadow-[0_0_12px_2px_#C2F738]"
             >
               Busco desenvolvimento pessoal
-            </a>
+            </Link>
           </div>
 
         </div>
                   <a
   href="https://wa.me/5511945682542?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Enmoda%2B%20para%20empresas!"
   onClick={() => {
-    window.gtag?.('event','whatsapp_click',{ location:'site', campaign:'enterprise' });
-    window.fbq?.('trackCustom','WhatsappClick',{ location:'site', campaign:'enterprise' });
+    window.gtag?.('event','whatsapp_click',{ location:'site', campaign:'/enterprise' });
+    window.fbq?.('trackCustom','WhatsappClick',{ location:'site', campaign:'/enterprise' });
   }}
   className="text-right fixed rounded-full px-6 py-3 font-semibold bg-[#25D366] text-[#073B1A]"
 >

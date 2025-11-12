@@ -33,12 +33,12 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href="/assinatura#planosass"
+          <Link
+            to="/assinatura#planosass"
             className="hidden md:inline px-4 py-1.5 rounded-full bg-[#C2F738] text-[#32410A] hover:shadow-[0_0_8px_1px_#C2F738]"
           >
             ASSINE AGORA
-          </a>
+          </Link>
           <a
           target="blank_"
             href="https://play.enmodamais.com.br/login"
@@ -96,13 +96,13 @@ export default function Header() {
 
           <div className="h-px w-full bg-white/10 my-2" />
 
-          <a
-            href="/assinatura#planosass"
+          <Link
+            to="/assinatura#planosass"
             onClick={() => setOpen(false)}
             className="mt-2 px-4 py-2 rounded-full bg-[#C2F738] text-[#32410A] text-center font-semibold hover:bg-[#B4E436]"
           >
             ASSINE AGORA
-          </a>
+          </Link>
           <a
             target="blank_"
             href="https://play.enmodamais.com.br/login"

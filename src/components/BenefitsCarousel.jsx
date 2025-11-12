@@ -4,6 +4,12 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import a1 from "../assets/assinantes/assinante1.jpg";
+import a2 from "../assets/assinantes/assinante2.jpg";
+import a3 from "../assets/assinantes/assinante3.jpg";
+
+const AVATARS = [a1, a2, a3];
+
 const BENEFITS = [
   { icon: <CheckCircle className="w-6 h-6 text-[#FF2C64]" />, title: "Estude com os melhores", text: "Aprenda com experts que moldam a indústria da moda." },
   { icon: <BookOpen className="w-6 h-6 text-[#FF2C64]" />, title: "Explore temas diferentes", text: "Consultoria de imagem, design, marketing, comunicação, varejo e muito mais." },
@@ -146,7 +152,7 @@ export default function BenefitsCarousel({ speedPxPerFrame = 1.1 }) {
 
         <div className="mt-2 flex flex-col items-center gap-3
                 md:flex-row md:justify-center md:gap-4">
-           <Link to="assinatura#planosass"
+           <Link to="#planoshome2"
     className="font-bold px-3 py-1 text-base
                md:px-4 md:py-1.5 md:text-lg
                rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out
@@ -154,16 +160,22 @@ export default function BenefitsCarousel({ speedPxPerFrame = 1.1 }) {
     QUERO COMEÇAR AGORA
   </Link>
 
-  <div className="flex items-center gap-1">
-    <div className="flex -space-x-2.5">
-      <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-[#0B0B15]" />
-      <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-[#0B0B15]" />
-      <div className="w-7 h-7 rounded-full bg-gray-300 border-2 border-[#0B0B15]" />
-    </div>
-    <span className="text-xs md:text-base font-semibold text-gray-300">
-      +1.000 assinantes
-    </span>
+
+            <div className="flex items-center gap-1">
+  <div className="flex -space-x-2.5">
+    {AVATARS.slice(0, 3).map((src, i) => (
+      <img
+        key={i}
+        src={src}
+        alt={`Assinante ${i + 1}`}
+        className="w-9 h-9 rounded-full object-cover border-2 border-[#0B0B15]"
+      />
+    ))}
   </div>
+  <span className="text-xs md:text-base font-semibold text-gray-300">
+    +1.000 assinantes
+  </span>
+</div>
         </div>
       </div>
 
