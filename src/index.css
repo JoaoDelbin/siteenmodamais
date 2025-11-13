@@ -11,6 +11,26 @@
   html { scroll-behavior: smooth; }
 }
 
+/* FORÇAR COR DOS BOTÕES DA HOTMART */
+.hotmart-fb.hotmart__button-checkout.reset,
+.hotmart-fb.hotmart__button-checkout.reset:hover,
+.hotmart-fb.hotmart__button-checkout.reset:active,
+.hotmart-fb.hotmart__button-checkout.reset:focus,
+.hotmart-fb.hotmart__button-checkout.reset:focus-visible {
+  background-color: #C2F738 !important;
+  background-image: none !important; /* mata o degradê/gradiente */
+  color: #32410A !important;
+  border: none !important;
+}
+
+/* Glow no hover / active */
+.hotmart-fb.hotmart__button-checkout.reset:hover,
+.hotmart-fb.hotmart__button-checkout.reset:active {
+  box-shadow: 0 0 10px 2px #C2F738 !important;
+}
+
+
+
 /* === Cookie bar full-width no rodapé === */
 #cc--main .cc-nb{
   position: fixed !important;

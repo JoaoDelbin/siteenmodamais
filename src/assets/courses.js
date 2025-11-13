@@ -67,7 +67,7 @@ const COURSES = [
     teacherId: "pietro-trindade",
     teacherPhoto: "pietro-trindade.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, lorem id maximus aliquet, urna neque ultrices sem, ut cursus erat arcu a odio.",
+      "Pietro Trindade é visagista sênior e educador com mais de 25 anos de atuação nas áreas de beleza, imagem e estilo. À frente da Pietrends, trabalha com pesquisa, criação e desenvolvimento de metodologias voltadas ao visagismo contemporâneo, unindo estética, comportamento e identidade pessoal. Formado em Consultoria de Moda pela Faculdade Santa Marcelina, Pietro atua também como educador e pesquisador, conectando ciência, arte e expressão individual em seus projetos.",
     tagline:
       "Transforme a leitura do rosto em uma ferramenta poderosa para imagem e estilo.",
     learn: [
@@ -374,7 +374,7 @@ const COURSES = [
     teacherId: "nathalia-anjos",
     teacherPhoto: "nathalia-anjos.png",
     teacherBio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae neque a nisl pretium accumsan. Ut bibendum, lacus et sagittis iaculis, odio risus bibendum libero.",
+      "Nathalia Anjos é autora do livro “O Cérebro e a Moda” e atua há mais de 11 anos no Senac São Paulo, onde coordena o evento de inovação Geração Senac. Sua trajetória conecta moda, comunicação, comportamento e neurociência, com experiências em marcas como Adriana Degreas e na RedeTV!, além de projetos realizados em países como França, Japão e Estados Unidos. É também cofundadora do #MeditaModa e coapresentadora do podcast Bruxas do Comportamento.",
     tagline: "Do roteiro ao set: figurino que conta histórias.",
     learn: [
       "Estética audiovisual",

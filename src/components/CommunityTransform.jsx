@@ -1,4 +1,12 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import AnaBeatrizImg from "../assets/assinantes/anabeatriz.jpg";
+import GabrielaFelixImg from "../assets/assinantes/gabrielafelix.jpg"; // ajuste o nome se for diferente
+import RafaelaImg from "../assets/assinantes/rafaella.jpg";
+import QuerenImg from "../assets/assinantes/queren.jpg";              // ou Queren.jpg, depende do arquivo
+import RafaelImg from "../assets/assinantes/rafael.jpg";
+
+
+
 
 function TypewriterBar({
   items = [],
@@ -136,7 +144,7 @@ function VideoModal({ open, onClose, src }) {
           />
         )}
         <button
-          className="absolute -top-3 -right-3 w-9 h-9 rounded-full bg-white text-black grid place-items-center shadow"
+          className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white text-black grid place-items-center shadow"
           onClick={onClose}
           aria-label="Fechar"
         >
@@ -149,43 +157,45 @@ function VideoModal({ open, onClose, src }) {
 
 const TESTIMONIALS = [
   {
-    quote: "Conteúdo direto do mercado. As mentorias me deram clareza de carreira.",
+    quote:
+      "Juntou todos os cursos que eu tava procurando com professores extremamente qualificados, aulas super didáticas e envolventes que eu posso assistir em qualquer lugar.",
     name: "Ana Beatriz",
     role: "Assinante enmoda+",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
+    avatarUrl: AnaBeatrizImg,
     videoUrl: "https://www.youtube.com/embed/EO-fKonlCzQ?autoplay=1",
   },
   {
-    quote: "Diversos cursos de qualidade que ensinam muito bem as carreiras de moda",
+    quote:
+      "É uma ótima oportunidade para você que não pode fazer uma faculdade mas quer aprender alguma coisa especifica com qualidade ou até para quem faz faculdade ou já é formado e quer relembrar algo e completar seu currículo... É muito bom! !",
     name: "Gabriela Felix",
     role: "Assinante enmoda+",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
+    avatarUrl: GabrielaFelixImg,
     videoUrl: "https://www.youtube.com/embed/jZ8VU2qUZFs?start=464&autoplay=1",
   },
   {
-    quote: "A coordenadora do curso me indicou a Enmoda+ e foi a melhor decisão. Os cursos são completíssimos, superaram minhas expectativas e estão me preparando muito melhor para chegar na faculdade.",
+    quote:
+      "A coordenadora do curso me indicou a Enmoda+ e foi a melhor decisão. Os cursos são completíssimos, superaram minhas expectativas e estão me preparando muito melhor para chegar na faculdade.",
     name: "Rafaela Hennemann",
     role: "Assinante enmoda+",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
+    avatarUrl: RafaelaImg,
   },
   {
-    quote: "Aplicativo funciona super bem. As aulas bem explicativas e ótimos conteúdos riquíssimos de moda. Melhor investimento que fiz!",
-    name: "Vasconcellos",
+    quote:
+      "Aplicativo funciona super bem. As aulas bem explicativas e ótimos conteúdos riquíssimos de moda. Melhor investimento que fiz!",
+    name: "Quéren Vasconcellos",
     role: "Assinante enmoda+",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
+    avatarUrl: QuerenImg,
   },
   {
-    quote: "Sonho em ter uma loja de roupas, vi o conteúdo com algumas figuras que acompanho no instagram e achei muito interessante, o atendimento na compra também foi muito bom.",
-    name: "Anônimo",
+    quote:
+      "Gostaria de elogiar as aulas da profissional Muriel Campanhã. A narrativa dela, reflexões e a maneira que ela administra as aulas… A sensação que tenho é que estou em sala de aula com ela.",
+    name: "Rafael",
     role: "Assinante enmoda+",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
+    avatarUrl: RafaelImg,
   },
 ];
+
+
 
 function useStableTestimonialHeight(quotes, widthRef) {
   const [minHeight, setMinHeight] = useState(null);
@@ -244,6 +254,7 @@ function useStableTestimonialHeight(quotes, widthRef) {
 export default function CommunityTransform() {
   const [i, setI] = useState(0);
   const t = TESTIMONIALS[i];
+  const hasVideo = Boolean(t.videoUrl);
   const [videoOpen, setVideoOpen] = useState(false);
   const timerRef = useRef(null);
 
@@ -251,7 +262,7 @@ export default function CommunityTransform() {
     if (videoOpen) return;
     timerRef.current = setInterval(() => {
       setI((p) => (p + 1) % TESTIMONIALS.length);
-    }, 3500);
+    }, 6000); //tempo de aparição em milissegundos
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
@@ -299,29 +310,52 @@ export default function CommunityTransform() {
           </div>
 
           <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 flex-col items-center gap-2">
-            <button
-              onClick={() => setVideoOpen(true)}
-              className="h-20 w-20 lg:h-24 lg:w-24 rounded-full overflow-hidden ring-2 ring-[#FF2D55] shadow-md hover:scale-105 transition"
-              aria-label="Assistir ao vídeo"
-            >
-              <img src={t.avatarUrl} alt={`Foto de ${t.name}`} className=" w-full h-full object-cover" />
-            </button>
-            <button onClick={() => setVideoOpen(true)} className="text-xs lg:text-sm underline text-[#FF2D55] hover:text-white">
-              assista ao vídeo
-            </button>
-          </div>
-
+  {hasVideo ? (
+    <>
+      <button
+        onClick={() => setVideoOpen(true)}
+        className="h-20 w-20 lg:h-24 lg:w-24 rounded-full overflow-hidden ring-2 ring-[#FF2D55] shadow-md hover:scale-105 transition"
+        aria-label="Assistir ao vídeo"
+      >
+        <img src={t.avatarUrl} alt={`Foto de ${t.name}`} className="w-full h-full object-cover" />
+      </button>
+      <button
+        onClick={() => setVideoOpen(true)}
+        className="text-xs lg:text-sm underline text-[#FF2D55] hover:text-white"
+      >
+        assista ao vídeo
+      </button>
+    </>
+  ) : (
+    // só mostra a foto, sem clique e sem texto “assista ao vídeo”
+    <div className="h-20 w-20 lg:h-24 lg:w-24 rounded-full overflow-hidden ring-2 ring-[#FF2D55] shadow-md">
+      <img src={t.avatarUrl} alt={`Foto de ${t.name}`} className="w-full h-full object-cover" />
+    </div>
+  )}
+</div>
           <div className="md:hidden mt-4 flex flex-col items-center gap-2">
-            <button
-              onClick={() => setVideoOpen(true)}
-              className="h-20 w-20 rounded-full overflow-hidden ring-2 ring-[#FF2D55] shadow-md"
-            >
-              <img src={t.avatarUrl} alt={`Foto de ${t.name}`} className="w-full h-full object-cover" />
-            </button>
-            <button onClick={() => setVideoOpen(true)} className="text-sm underline text-[#FF2D55] hover:text-white">
-              assista ao vídeo
-            </button>
-          </div>
+  {hasVideo ? (
+    <>
+      <button
+        onClick={() => setVideoOpen(true)}
+        className="h-20 w-20 rounded-full overflow-hidden ring-2 ring-[#FF2D55] shadow-md"
+      >
+        <img src={t.avatarUrl} alt={`Foto de ${t.name}`} className="w-full h-full object-cover" />
+      </button>
+      <button
+        onClick={() => setVideoOpen(true)}
+        className="text-sm underline text-[#FF2D55] hover:text-white"
+      >
+        assista ao vídeo
+      </button>
+    </>
+  ) : (
+    <div className="h-20 w-20 rounded-full overflow-hidden ring-2 ring-[#FF2D55] shadow-md">
+      <img src={t.avatarUrl} alt={`Foto de ${t.name}`} className="w-full h-full object-cover" />
+    </div>
+  )}
+</div>
+
         </div>
 
         <div className="mt-6 flex items-center justify-center gap-2">

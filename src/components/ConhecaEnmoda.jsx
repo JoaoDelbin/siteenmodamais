@@ -102,26 +102,35 @@ export default function ConhecaEnmoda({ imageSrc = laptop }) {
             <div className="mt-6 md:mt-10">
               <div className="text-white/70 mb-5 md:mb-4 text-sm">Números que inspiram confiança:</div>
 
-              <div className="grid grid-cols-3 gap-4 ">
-                {stats.map((s, idx) => (
-                  <div
-                    key={idx}
-                    className="
-                      md:min-w-[160px] rounded-xl
-                      min-h-[80px]
-                      max-w-[180px]
-                      px-2 py-6 md:px-5 md:py-4 text-center
-                      
-                      shadow-[0_0_6px_4px_rgba(255,44,100,0.40)]
-                    "
-                  >
-                    <Counter to={s.to} prefix="+" />
-                    <div className="mt-1 text-wrap text-sm uppercase tracking-wide text-white/80 font-medium md:font-semibold">
-                      {s.labelTop}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <div className="grid grid-cols-3 gap-4">
+  {stats.map((s, idx) => (
+    <div
+      key={idx}
+      className="
+        md:min-w-[160px]
+        min-h-[80px]
+        max-w-[180px]
+        px-2 py-6 md:px-5 md:py-4
+        rounded-xl
+        bg-[#110E0F]
+        border border-white/10
+        text-center
+        cursor-default select-none
+        flex flex-col items-center justify-center
+        shadow-[0_0_10px_rgba(0,0,0,0.6)]
+        hover:shadow-[0_0_12px_4px_#FF2C64]
+        transition
+      "
+    >
+      <Counter to={s.to} prefix="+" />
+
+      <div className="mt-1 text-[11px] md:text-sm uppercase tracking-wide text-white/80 font-semibold">
+        {s.labelTop}
+      </div>
+    </div>
+  ))}
+</div>
+
 
               <div className="hidden mt-6 md:mt-8 text-center -mb-10">
                 <Link to="assinatura#planosass" className="font-bold px-3 py-1 text-base

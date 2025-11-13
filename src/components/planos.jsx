@@ -1,6 +1,6 @@
 import { CheckCircle, BadgePercent } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-
+import CTAButton from "../components/CTA";
 
 const benefitsMonthly = [
   "Acesso a todos os cursos",
@@ -39,24 +39,49 @@ export default function PlansSection() {
     if (anualRef.current)  anualRef.current.setAttribute("onclick", "return false;");
   }, [hotmartReady]);
 
-  const Btn = ({ innerRef, href, children }) => {
-    const base =
-      "text-center mt-6 w-full py-3 rounded-full font-semibold transition duration-200";
-    const theme = "bg-[#C2F738] text-[#32410A] hover:bg-[#B4E436]";
-    return (
-      <a
-        ref={innerRef}
-        href={href}
-        className={`${base} ${theme} hotmart-fb hotmart__button-checkout reset ${
-          !hotmartReady ? "pointer-events-none opacity-60" : ""
-        }`}
-        aria-disabled={!hotmartReady}
-        title={!hotmartReady ? "Carregando checkout..." : undefined}
-      >
-        {children}
-      </a>
-    );
-  };
+const Btn = ({ innerRef, href, children }) => {
+  const base =
+    "hidden sm:block mt-6 w-full text-center font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full transition duration-300 ease-in-out";
+  const theme = [
+    "bg-none",
+    "!bg-[#C2F738]",
+    "!text-[#32410A]",
+    "!text-2xl",
+
+    // HOVER
+    "hover:bg-none",
+    "hover:!bg-[#C2F738]",
+    "hover:!text-[#32410A]",
+    "hover:shadow-[0_0_10px_2px_#C2F738]",
+
+    // ACTIVE (clique)
+    "active:bg-none",
+    "active:!bg-[#C2F738]",
+    "active:!text-[#32410A]",
+    "active:shadow-[0_0_8px_2px_#C2F738]",
+
+    // FOCUS (acessibilidade / teclado)
+    "focus-visible:bg-none",
+    "focus-visible:!bg-[#C2F738]",
+    "focus-visible:!text-[#32410A]",
+  ].join(" ");
+
+  return (
+    <a
+      ref={innerRef}
+      href={href}
+      className={`${base} ${theme} hotmart-fb hotmart__button-checkout reset ${
+        !hotmartReady ? "pointer-events-none opacity-60" : ""
+      }`}
+      aria-disabled={!hotmartReady}
+      title={!hotmartReady ? "Carregando checkout..." : undefined}
+    >
+      {children}
+    </a>
+  );
+};
+
+
 
   return (
     <section id="planos" className="bg-[#0D0A0B] text-white py-14">
@@ -93,6 +118,9 @@ export default function PlansSection() {
             >
               ASSINAR MENSAL
             </Btn>
+            <CTAButton variant="primary" href="https://pay.hotmart.com/Y93317667Q?checkoutMode=2" size="lg" className='block sm:hidden mb-2 mt-4'>
+  ASSINAR MENSAL
+</CTAButton>
           </article>
 
           {/* ANUAL */}
@@ -129,6 +157,9 @@ export default function PlansSection() {
             >
               ASSINAR ANUAL
             </Btn>
+             <CTAButton variant="primary" href="https://pay.hotmart.com/P93318440Y?checkoutMode=2" size="lg" className='block sm:hidden mb-2 mt-4'>
+  ASSINAR ANUAL
+</CTAButton>
           </article>
         </div>
       </div>

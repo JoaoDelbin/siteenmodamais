@@ -119,8 +119,8 @@ export default function BenefitsCarousel({ speedPxPerFrame = 1.1 }) {
 
   return (
     <section className="w-full bg-[#0D0A0B] text-white">
-      <div className="mt-6 max-w-[1440px] mx-auto px-6 pt-2 md:pt-8 pb-10">
-        <h2 className="text-center text-3xl md:text-5xl font-bold mb-6">
+      <div className="mt-6 max-w-[1440px] mx-auto px-6 pt-2 md:pt-8 md:pb-10">
+        <h2 className="text-center text-3xl md:text-5xl font-bold md:mb-6">
           Por que assinar a <span className="text-[#FF2C64]">enmoda+</span>
         </h2>
 

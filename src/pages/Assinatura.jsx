@@ -44,7 +44,7 @@ export default function Assinatura() {
 
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Link
-                  to="/assinatura#planosass"
+                  to="/assinatura#planosass1"
                   className="font-bold px-3 py-1 text-base md:px-4 md:py-1.5 md:text-lg rounded-full bg-[#C2F738] text-[#32410A] transition duration-300 ease-in-out hover:shadow-[0_0_10px_2px_#C2F738]"
                 >
                   QUERO COMEÇAR AGORA
@@ -64,12 +64,16 @@ export default function Assinatura() {
             </div>
 
            
-            <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/[0.04] aspect-video grid place-items-center">
-              <div className="flex items-center gap-3 text-white/80">
-                <PlayCircle className="w-7 h-7" />
-                <span className="text-sm">Vídeo de apresentação</span>
-              </div>
-            </div>
+            <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/[0.04] aspect-video">
+  <iframe
+    className="w-full h-full"
+    src="https://www.youtube.com/embed/_fu0afiEYuk"
+    title="Vídeo de apresentação EnModa"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  />
+</div>
           </div>
         </div>
         
@@ -78,7 +82,7 @@ export default function Assinatura() {
       
       <section className="mt-6 mb-6">
       <DiferenciaisSection />
-      <div className="text-center"><CTAButton to="/assinatura#planosass" variant="primary" size="md" className='mb-2 md:mb-0'>
+      <div className="text-center"><CTAButton to="/assinatura#planosass2" variant="primary" size="md" className='mb-2 md:mb-0'>
   QUERO COMEÇAR AGORA
 </CTAButton></div>
         </section>
@@ -156,7 +160,11 @@ export default function Assinatura() {
 
       
       <section id="planosass" className="pt-4 pb-12">
+        <div id="planosass1">
+           <div id="planosass2">
         <PlansSection />
+          </div>
+        </div>
       </section>
 
      

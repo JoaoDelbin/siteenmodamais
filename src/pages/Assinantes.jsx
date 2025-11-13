@@ -4,6 +4,14 @@ import CTAButton from "../components/CTA";
 import SubscribersTestimonialSection from "../components/CapDepoimentos";
 import Footer from "../components/rodape.jsx";
 
+import AnaBeatrizImg from "../assets/assinantes/anabeatriz.jpg";
+import GabrielaFelixImg from "../assets/assinantes/gabrielafelix.jpg"; 
+import RafaelaImg from "../assets/assinantes/rafaella.jpg";
+import QuerenImg from "../assets/assinantes/queren.jpg";              
+import RafaelImg from "../assets/assinantes/rafael.jpg";
+import DepoimentoRafaelaImg from "../assets/assinantes/depoimentorafaela.jpg";
+import DepoimentoPrint from "../assets/assinantes/depoimentoprint.jpg";
+
 function useLockBody(open) {
   useEffect(() => {
     if (open) document.body.classList.add("overflow-hidden");
@@ -28,7 +36,7 @@ function VideoModal({ open, onClose, src }) {
     <div className="fixed inset-0 z-[80] bg-black/70 backdrop-blur-sm grid place-items-center p-4" onClick={onClose} role="dialog" aria-modal="true">
       <div className="relative w-full max-w-3xl aspect-video bg-black rounded-2xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
         {src && <iframe className="absolute inset-0 w-full h-full" src={src} title="Depoimento" allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen />}
-        <button ref={btnRef} onClick={onClose} className="absolute -top-3 -right-3 w-9 h-9 rounded-full bg-white text-black grid place-items-center shadow" aria-label="Fechar">✕</button>
+        <button ref={btnRef} onClick={onClose} className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white text-black grid place-items-center shadow" aria-label="Fechar">✕</button>
       </div>
     </div>
   );
@@ -36,59 +44,102 @@ function VideoModal({ open, onClose, src }) {
 
 const TESTIMONIALS = [
   {
-    id: "ana",
-    quote: "Conteúdo direto do mercado. As mentorias me deram clareza de carreira.",
-    name: "Ana Costa",
+    quote:
+      "Juntou todos os cursos que eu tava procurando com professores extremamente qualificados, aulas super didáticas e envolventes que eu posso assistir em qualquer lugar.",
+    name: "Ana Beatriz",
     role: "Assinante enmoda+",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
-    video: "https://www.youtube.com/embed/ysz5S6PUM-U?autoplay=1",
+    avatarUrl: AnaBeatrizImg,
+    videoUrl: "https://www.youtube.com/embed/EO-fKonlCzQ?autoplay=1",
   },
   {
-    id: "bruno",
-    quote: "A comunidade acelera muito o networking. Recomendo demais!",
-    name: "Bruno Martins",
+    quote:
+      "É uma ótima oportunidade para você que não pode fazer uma faculdade mas quer aprender alguma coisa especifica com qualidade ou até para quem faz faculdade ou já é formado e quer relembrar algo e completar seu currículo... É muito bom! !",
+    name: "Gabriela Felix",
     role: "Assinante enmoda+",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
-    video: "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+    avatarUrl: GabrielaFelixImg,
+    videoUrl: "https://www.youtube.com/embed/jZ8VU2qUZFs?start=463&autoplay=1",
   },
   {
-    id: "luiza",
-    quote: "As trilhas e materiais complementares mudaram meu dia a dia no trabalho.",
-    name: "Luiza Almeida",
+    quote:
+      "A coordenadora do curso me indicou a Enmoda+ e foi a melhor decisão. Os cursos são completíssimos, superaram minhas expectativas e estão me preparando muito melhor para chegar na faculdade.",
+    name: "Rafaela Hennemann",
     role: "Assinante enmoda+",
-    avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=256&auto=format&fit=facearea&facepad=2&h=256",
-    video: "https://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1",
+    avatarUrl: RafaelaImg,
+    proofImage: DepoimentoRafaelaImg,
+  },
+  {
+    quote:
+      "Aplicativo funciona super bem. As aulas bem explicativas e ótimos conteúdos riquíssimos de moda. Melhor investimento que fiz!",
+    name: "Quéren Vasconcellos",
+    role: "Assinante enmoda+",
+    avatarUrl: QuerenImg,
+    proofImage: DepoimentoPrint,
+  },
+  {
+    quote:
+      "Gostaria de elogiar as aulas da profissional Muriel Campanhã. A narrativa dela, reflexões e a maneira que ela administra as aulas… A sensação que tenho é que estou em sala de aula com ela.",
+    name: "Rafael",
+    role: "Assinante enmoda+",
+    avatarUrl: RafaelImg,
+    proofImage: DepoimentoPrint,
   },
 ];
 
-function Card({ t, onVideo }) {
+function Card({ t, onVideo, onImage }) {
+  const hasVideo = Boolean(t.videoUrl);
+  const hasImage = Boolean(t.proofImage);
+
   return (
     <div className="h-full rounded-2xl border border-white/5 bg-[#110E0F] p-5 sm:p-6 flex flex-col justify-between shadow-[0_0_10px_rgba(255,44,100,0.2)]">
       <div>
         <div className="text-xl leading-snug">
-          <span className="text-[#FF2C64]">“</span> {t.quote} <span className="text-[#FF2C64]">”</span>
+          <span className="text-[#FF2C64]">“</span> {t.quote}{" "}
+          <span className="text-[#FF2C64]">”</span>
         </div>
       </div>
+
       <div className="mt-5 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover ring-2 ring-[#FF2C64]/50" />
+          <img
+            src={t.avatarUrl}
+            alt={t.name}
+            className="w-10 h-10 rounded-full object-cover ring-2 ring-[#FF2C64]/50"
+          />
           <div>
             <div className="text-sm font-semibold">{t.name}</div>
             <div className="text-xs text-[#FF2C64]">{t.role}</div>
           </div>
         </div>
-        {t.video && (
-          <button onClick={() => onVideo(t.video)} className="text-xs underline text-[#FF2C64] hover:text-white">
-            assistir ao vídeo
-          </button>
+
+        {(hasVideo || hasImage) && (
+          <div className="flex flex-col items-end gap-1">
+            {hasVideo && (
+              <button
+                onClick={() => onVideo(t.videoUrl)}
+                className="text-xs underline text-[#FF2C64] hover:text-white"
+              >
+                ver depoimento
+              </button>
+            )}
+            {hasImage && (
+              <button
+                onClick={() => onImage(t.proofImage)}
+                className="text-xs underline text-[#FF2C64] hover:text-white"
+              >
+                ver depoimento
+              </button>
+            )}
+          </div>
         )}
       </div>
     </div>
   );
 }
 
+
 export default function Assinantes() {
   const [videoSrc, setVideoSrc] = useState(null);
+  const [imageSrc, setImageSrc] = useState(null);
 
   return (
     <main className="min-h-screen w-full bg-[#0D0A0B] text-white">
@@ -105,22 +156,80 @@ export default function Assinantes() {
   QUERO COMEÇAR AGORA
 </CTAButton>
         </div>
-
-        <div className="mt-14 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
-          {TESTIMONIALS.map((t) => (
-            <Card key={t.id} t={t} onVideo={(src) => setVideoSrc(src)} />
+<div className="mt-14 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
+          {TESTIMONIALS.map((t, idx) => (
+            <Card
+              key={idx}
+              t={t}
+              onVideo={(src) => setVideoSrc(src)}
+              onImage={(src) => setImageSrc(src)}
+            />
           ))}
         </div>
-</div>
+      </div>
+
+
+
+
 
 <SubscribersTestimonialSection />
 
       
 
       <VideoModal open={!!videoSrc} onClose={() => setVideoSrc(null)} src={videoSrc} />
-          <section>
-                        <Footer />
-                      </section>
+
+         <ImageModal
+        open={!!imageSrc}
+        onClose={() => setImageSrc(null)}
+        src={imageSrc}
+      />
+      
     </main>
+  );
+}
+
+function ImageModal({ open, onClose, src }) {
+  const btnRef = useRef(null);
+  useLockBody(open);
+
+  useEffect(() => {
+    const onEsc = (e) => e.key === "Escape" && onClose();
+    if (open) {
+      window.addEventListener("keydown", onEsc);
+      setTimeout(() => btnRef.current?.focus(), 0);
+    }
+    return () => window.removeEventListener("keydown", onEsc);
+  }, [open, onClose]);
+
+  if (!open) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-[80] bg-black/70 backdrop-blur-sm grid place-items-center p-4"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        className="relative w-full max-w-2xl bg-black rounded-2xl overflow-hidden"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {src && (
+          <img
+            src={src}
+            alt="Depoimento"
+            className="w-full h-auto max-h-[80vh] object-contain bg-black"
+          />
+        )}
+        <button
+          ref={btnRef}
+          onClick={onClose}
+          className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white text-black grid place-items-center shadow"
+          aria-label="Fechar"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
   );
 }

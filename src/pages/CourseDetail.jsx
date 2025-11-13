@@ -32,12 +32,18 @@ export default function CourseDetail() {
     <main className="min-h-screen w-full bg-[#0D0A0B] text-white">
       <div className="max-w-[1200px] mx-auto px-6 pt-8 pb-12">
         <div className="mb-6">
-          <Link to="/conteudo" className="text-white/70 hover:text-white text-sm">
+          <Link to="/conteudo" className="hidden md:block text-white/70 hover:text-white text-sm">
+            ← Voltar
+          </Link>
+          <Link to="/conteudo" className="sm:hidden w-12 h-12 rounded-full bg-white text-black grid place-items-center absolute top-24 right-4">
+            ✕
+          </Link>
+          <Link to="/conteudo" className="mt-3 hidden sm:hidden text-white/40 hover:text-white grid text-xs">
             ← Voltar
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[260px,1fr] gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-[260px,1fr] gap-8 pt-10 md:pt-2">
           <div className="hidden md:block md:w-[clamp(130px,16vw,230px)]">
   <img
     src={capaUrl}

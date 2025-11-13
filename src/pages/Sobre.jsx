@@ -59,8 +59,8 @@ export default function Sobre() {
 
       {/* HISTÓRIA + FUNDADOR */}
       <section>
-        <div className="max-w-[1200px] mx-auto px-6 pb-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 rounded-2xl border border-white/5 bg-[#110E0F] p-6 md:p-8">
+        <div className="max-w-[1200px] mx-auto px-6 pb-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="lg:col-span-1 rounded-2xl border border-white/5 bg-[#110E0F] p-6 md:p-8">
             <h2 className="text-2xl md:text-3xl font-bold">A história que nos trouxe até aqui</h2>
 
             <div className="mt-4 space-y-4 text-white/85 leading-relaxed">
@@ -118,8 +118,11 @@ export default function Sobre() {
                 <div className="text-lg font-bold leading-tight">Airton Embacher</div>
                 
                 <p className="mt-3 text-white/85 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae dolor et nunc
-                  condimentum placerat. Etiam lobortis hendrerit nisl id vestibulum...
+                  Airton Embacher iniciou sua trajetória profissional na década de 1970, quando a C&A chegou ao Brasil. Após ser aprovado em um processo seletivo para a área de compras, tornou-se executivo da marca, sendo responsável por introduzir no varejo nacional a venda de conjuntos coordenados, uma prática até então inédita no mercado.
+
+Com passagem pela indústria têxtil e experiência internacional em pesquisa de tendências, construiu uma carreira sólida unindo negócios, comportamento e criatividade. É autor de livros de moda, Doutor em Comunicação e Semiótica e Mestre em Psicologia Social pela PUC-SP.
+
+Foi Diretor das áreas de Comunicação, Artes, Design e Moda e Coordenador dos cursos de Moda da Universidade Anhembi Morumbi, além de Diretor de Novos Negócios da Escola Panamericana de Arte.
                 </p>
               </div>
             </div>
