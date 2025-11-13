@@ -35,7 +35,7 @@ export default function CourseDetail() {
           <Link to="/conteudo" className="hidden md:block text-white/70 hover:text-white text-sm">
             ← Voltar
           </Link>
-          <Link to="/conteudo" className="sm:hidden w-12 h-12 rounded-full bg-white text-black grid place-items-center absolute top-24 right-4">
+          <Link to="/conteudo" className="sm:hidden w-12 h-12 rounded-full bg-[#FF2C64] text-white grid place-items-center absolute top-24 right-4">
             ✕
           </Link>
           <Link to="/conteudo" className="mt-3 hidden sm:hidden text-white/40 hover:text-white grid text-xs">
