@@ -7,7 +7,7 @@ const BRAND = { accent: "#FF2C64", pillBg: "rgba(255,44,100,0.12)", cardBg: "#11
 
 // Links/configs
 const PERSONAL_URL = "/assinatura"; 
-const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyjQA19wIiFYb7YNS6HeajNK-juOV0BxhCBntF5_NROvJWo5aXPfPdc3MHJVW9pCQ8/exec";             //  Web App URL do Apps Script
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyTEzoKNjkaFAI3KvFYOPXTB8B67Zb-IkaEw78bQ8c3YNPqsQqc3gVqm8BJj1HP9lOf/exec";             //  Web App URL do Apps Script
 
 
 function cx(...classes) { return classes.filter(Boolean).join(" "); }

@@ -144,7 +144,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/enmodamais/"
                 target="_blank"
                 rel="noreferrer"
                 className="grid h-9 w-9 place-items-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
@@ -152,7 +152,7 @@ export default function Footer() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="https://www.youtube.com/"
+                href="https://www.youtube.com/channel/UCGq5ziAZvT1Vo1cfiNb0kaQ"
                 target="_blank"
                 rel="noreferrer"
                 className="grid h-9 w-9 place-items-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
@@ -163,7 +163,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="grid h-9 w-9 place-items-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
+                className="hidden grid h-9 w-9 place-items-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
               >
                 <Linkedin className="h-4 w-4" />
               </a>
@@ -178,7 +178,7 @@ export default function Footer() {
           </p>
           <p className="text-white/50">
             Desenvolvido por {" "}
-            <span className="text-white">Joao Delbin</span>
+            <span className="text-white">João Delbin</span>
           </p>
         </div>
       </div>
