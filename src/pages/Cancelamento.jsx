@@ -4,7 +4,7 @@ import { AlertCircle, Check } from "lucide-react";
 
 // MESMA URL do Apps Script que você já usa no Enterprise / Depoimento
 const WEBHOOK_URL =
-  "https://script.google.com/macros/s/AKfycbyTEzoKNjkaFAI3KvFYOPXTB8B67Zb-IkaEw78bQ8c3YNPqsQqc3gVqm8BJj1HP9lOf/exec";
+  "https://script.google.com/macros/s/AKfycbwcbiBHVRk6dXyVjlUKfqNyxUKCxjw5_wosm2sr3e_FdZW-rZ8mSeWhmDoL8oRkEBw/exec";
 
 // helpers simples
 const validateEmail = (v) => /\S+@\S+\.[\w-]{2,}/.test((v || "").trim());

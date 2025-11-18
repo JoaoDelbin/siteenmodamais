@@ -7,7 +7,7 @@ const ACCENT = "#FF2C64";
 const CARD_BG = "#110E0F";
 
 
-const TESTIMONIAL_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyTEzoKNjkaFAI3KvFYOPXTB8B67Zb-IkaEw78bQ8c3YNPqsQqc3gVqm8BJj1HP9lOf/exec";
+const TESTIMONIAL_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwcbiBHVRk6dXyVjlUKfqNyxUKCxjw5_wosm2sr3e_FdZW-rZ8mSeWhmDoL8oRkEBw/exec";
 
 const validateEmail = (v) => /\S+@\S+\.[\w-]{2,}/.test((v || "").trim());
 
