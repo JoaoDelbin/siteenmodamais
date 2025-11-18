@@ -166,7 +166,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "É uma ótima oportunidade para você que não pode fazer uma faculdade mas quer aprender alguma coisa especifica com qualidade ou até para quem faz faculdade ou já é formado e quer relembrar algo e completar seu currículo... É muito bom! !",
+      "É uma ótima oportunidade para você que não pode fazer uma faculdade mas quer aprender alguma coisa especifica com qualidade ou até para quem faz faculdade ou já é formado e quer relembrar algo e completar seu currículo... É muito bom!",
     name: "Gabriela Felix",
     role: "Assinante enmoda+",
     avatarUrl: GabrielaFelixImg,
