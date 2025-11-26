@@ -127,7 +127,7 @@ export default function Footer() {
                     Cancelamento
                   </Link>
                 </li>
-                <li>
+                <li className="hidden">
                 <a href="#" id="open_preferences_center">Atualizar preferências de cookies</a>
                 </li>
               </ul>

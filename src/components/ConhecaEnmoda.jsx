@@ -53,7 +53,7 @@ function Counter({ from = 0, to = 300, duration = 2000, prefix = "+", suffix = "
 
 function LaptopMock({ imageSrc }) {
   return (
-    <div className="w-full lg:min-w-[680px] hidden md:block mx-auto">
+    <div className="w-full lg:max-w-[680px] hidden lg:block mx-auto">
       <img
         src={imageSrc}
         alt="Plataforma Enmoda"
@@ -143,7 +143,7 @@ export default function ConhecaEnmoda({ imageSrc = laptop }) {
             </div>
           </div>
 
-          <div className="lg:pl-4">
+          <div className="">
             <LaptopMock imageSrc={imageSrc} />
           </div>
         </div>

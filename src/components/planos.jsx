@@ -11,7 +11,7 @@ const benefitsMonthly = [
 ];
 
 const benefitsAnnual = [
-  "Economia de 60%",
+  "Economia de 70%",
   "Acesso a todos os cursos",
   "Cursos de Moda exclusivos",
   "Suporte personalizado",
