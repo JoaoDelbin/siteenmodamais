@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import CTAButton from "../components/CTA";
 
 const benefitsMonthly = [
+  "Acesso em dobro! (assine 1 mês leve 2)",
   "Acesso a todos os cursos",
   "Cursos de Moda exclusivos",
   "Suporte personalizado",
@@ -11,8 +12,8 @@ const benefitsMonthly = [
 ];
 
 const benefitsAnnual = [
-  "Economia de 70%",
-  "Acesso a todos os cursos",
+  "Acesso a todos os cursos POR 2 ANOS",
+  "Economia de 60%",
   "Cursos de Moda exclusivos",
   "Suporte personalizado",
   "Certificação reconhecida",
@@ -97,6 +98,7 @@ const Btn = ({ innerRef, href, children }) => {
               <h3 className="text-xl font-bold tracking-wide">PLANO MENSAL</h3>
               <div className="mt-1 text-4xl font-bold text-[#FF2C64]">R$199</div>
               <p className="text-xs text-white/60 mt-1">R$2.388 por ano</p>
+              <p className="text-xs md:text-base font-bold mt-1">Com acesso em dobro!</p>
             </header>
 
             <ul className="space-y-3 text-sm md:text-[15px] flex-1">
@@ -114,11 +116,11 @@ const Btn = ({ innerRef, href, children }) => {
 
             <Btn
               innerRef={mensalRef}
-              href="https://pay.hotmart.com/Y93317667Q?checkoutMode=2?utm_source=enmodamais_site&utm_medium=cta&utm_campaign=assinatura_enmodamais&utm_content=botao_planos"
+              href="https://pay.hotmart.com/E103219777F?checkoutMode=2?utm_source=enmodamais_site&utm_medium=cta&utm_campaign=assinatura_enmodamais&utm_content=botao_planos"
             >
               ASSINAR MENSAL
             </Btn>
-            <CTAButton variant="primary" href="https://pay.hotmart.com/Y93317667Q?checkoutMode=2?utm_source=enmodamais_site&utm_medium=cta&utm_campaign=assinatura_enmodamais&utm_content=botao_planos" size="lg" className='block sm:hidden mb-2 mt-4'>
+            <CTAButton variant="primary" href="https://pay.hotmart.com/E103219777F?checkoutMode=2?utm_source=enmodamais_site&utm_medium=cta&utm_campaign=assinatura_enmodamais&utm_content=botao_planos" size="lg" className='block sm:hidden mb-2 mt-4'>
   ASSINAR MENSAL
 </CTAButton>
           </article>
@@ -126,16 +128,19 @@ const Btn = ({ innerRef, href, children }) => {
           {/* ANUAL */}
           <article className="relative rounded-xl bg-[#110E0F] border border-[#FF2C64] p-6 md:p-8 flex flex-col hover:shadow-[0_4px_20px_2px_#FF2C64]">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF2C64] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">
-              <BadgePercent className="w-5 h-5" /> MAIS VANTAJOSO
+              <BadgePercent className="w-5 h-5" /> MAIS VANTAJOSO 
             </span>
 
             <header className="text-center mb-6">
               <h3 className="text-xl font-bold tracking-wide">PLANO ANUAL</h3>
               <div className="mt-2 text-sm text-white/60 line-through">12x R$99 (total R$1188)</div>
-              <div className="mt-1 text-3xl md:text-4xl font-bold">
-                12x <span className="text-[#FF2C64]">R$55,30</span>
+              <div className="mt-1 text-3xl font-bold">
+                APENAS  
               </div>
-              <p className="text-base md:text-lg font-bold mt-1">Apenas R$663,6 por ano</p>
+              <div className="mt-1 text-3xl md:text-4xl font-bold">
+                12x <span className="text-[#FF2C64]">R$79</span>
+              </div>
+              <p className="text-xs md:text-base font-bold mt-1">Com acesso em dobro!</p>
             </header>
 
             <ul className="space-y-3 text-sm md:text-[15px] flex-1">
@@ -153,11 +158,11 @@ const Btn = ({ innerRef, href, children }) => {
 
             <Btn
               innerRef={anualRef}
-              href="https://pay.hotmart.com/P93318440Y?checkoutMode=2&off=5hogb7d0&bid=1763482808562?utm_source=enmodamais_site&utm_medium=cta&utm_campaign=assinatura_enmodamais&utm_content=botao_planos"
+              href="https://pay.hotmart.com/E96923495A?checkoutMode=2?utm_source=enmodamais_site&utm_medium=cta&utm_campaign=assinatura_enmodamais&utm_content=botao_planos"
             >
               ASSINAR ANUAL
             </Btn>
-             <CTAButton variant="primary" href="https://pay.hotmart.com/P93318440Y?checkoutMode=2&off=5hogb7d0&bid=1763482808562?utm_source=enmodamais_site&utm_medium=cta&utm_campaign=assinatura_enmodamais&utm_content=botao_planos" size="lg" className='block sm:hidden mb-2 mt-4'>
+             <CTAButton variant="primary" href="https://pay.hotmart.com/E96923495A?checkoutMode=2?utm_source=enmodamais_site&utm_medium=cta&utm_campaign=assinatura_enmodamais&utm_content=botao_planos" size="lg" className='block sm:hidden mb-2 mt-4'>
   ASSINAR ANUAL
 </CTAButton>
           </article>
