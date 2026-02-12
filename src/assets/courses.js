@@ -322,28 +322,6 @@ const COURSES = [
     ]
   },
   {
-    id: "pesquisa-de-tendencias-muriel-campanha",
-    title: "Pesquisa de tendências com Muriel Campanhã",
-    cover: "pesquisa-de-tendencias-muriel-campanha.png",
-    teacher: "Muriel Campanhã",
-    teacherId: "muriel-campanha",
-    teacherPhoto: "muriel-campanha.png",
-    teacherBio:
-      "Aos 18 anos, Muriel iniciou a carreira na Vogue, onde descobriu a paixão por materializar ideias e transformar conceitos em visual. Migrou para o mercado de produto, começando no grupo Vulcabrás (contribuindo com designs para a marca Rebook), passando pela Alpargatas e pelo grupo DASS, onde iniciou a marca Fila do zero, liderando equipes e transformando produtos. Depois, atuou por 7 anos na Adidas, adquirindo experiência vital em contexto de marca global.",
-    tagline:
-      "Metodologia prática para identificar e aplicar tendências.",
-    learn: [
-      "Conceitos para a pesquisa",
-      "Tendências e inspirações",
-      "Ciclos de tendências",
-      "Cenários e elementos",
-      "Diferenças geracionais",
-      "Ferramentas para pesquisa",
-      "Suportes para a moda",
-      "Planejamento e estratégia"
-    ]
-  },
-  {
     id: "vendas-de-moda-otavio-lima",
     title: "Vendas de moda com Otávio Lima",
     cover: "vendas-de-moda-otavio-lima.png",

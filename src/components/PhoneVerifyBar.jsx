@@ -3,8 +3,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 const OFFICIAL_NUMBERS = [
   "+55 11 96596-3613",
   "+55 11 97644-7837",
-  "11 97644-7837",
-  "+55 11 99441-9063",
   "+55 11 99190-2755",
 ];
 

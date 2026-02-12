@@ -15,6 +15,7 @@ import ConhecaEnmoda from "./components/ConhecaEnmoda";
 import BenefitsCarousel from "./components/BenefitsCarousel";
 import FaqSection, { FAQ_ALL } from "./components/FaqSection.jsx";
 import PlansSection from "./components/planos";
+import ComparativoEnmoda from "./components/Comparativo.jsx";
 import Header from "./components/nav";
 
 import ConteudoPage from "./pages/ConteudoPage.jsx";
@@ -110,12 +111,15 @@ function Home() {
       <section id="planoshome">
         <div id="planoshome1">
           <div id="planoshome2">
+        <div id="planoshome3">
         <PlansSection />
+         </div>
          </div>
         </div>
       </section>
       <section>
         <ConhecaEnmoda />
+        <ComparativoEnmoda/>
       </section>
       <section>
         <FaqSection items={FAQ_ALL.slice(0, 3)} />
